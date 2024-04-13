@@ -39,33 +39,52 @@ nav > a {
 
 .divBattery {
   background-color: rgb(238, 176, 61);
+  padding: 2% 4%;
+  gap: 5vh;
+
   display: flex;
+  align-items: center;
 }
 
 .divPlastic {
   background-color: rgb(165, 94, 94);
+  padding: 2% 4%;
+  gap: 5vh;
+
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
 }
 
 .divPaper {
   background-color: rgb(98, 98, 171);
+  padding: 2% 4%;
+  gap: 5vh;
+
   display: flex;
+  align-items: center;
 }
 
 .divGlass {
   background-color: rgb(120, 197, 126);
+  padding: 2% 4%;
+  gap: 5vh;
+
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
 }
 
 .imgLeft {
-  max-width: 25%;
+  min-width: 20vh;
+  max-width: 20vh;
+
+  min-height: 20vh;
+  max-height: 20vh;
+
   border: 3px solid black;
   border-radius: 100%;
   border-style: dashed;
-  width: 30vh;
-  height: 30vh;
 
   display: flex;
   align-items: center;
@@ -73,12 +92,15 @@ nav > a {
 }
 
 .imgRight {
-  max-width: 25%;
+  min-width: 20vh;
+  max-width: 20vh;
+
+  min-height: 20vh;
+  max-height: 20vh;
+
   border: 3px solid black;
   border-radius: 100%;
   border-style: dashed;
-  width: 30vh;
-  height: 30vh;
 
   display: flex;
   align-items: center;
