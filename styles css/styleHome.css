@@ -11,7 +11,8 @@ footer {
   height: 5%;
   width: 100%;
 
-  background-color: blueviolet;
+  background-color: black;
+  color: white;
 
   display: flex;
   align-items: center;
@@ -25,47 +26,89 @@ footer {
   height: 5%;
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-nav > a {
+nav > div > a {
   color: white;
   text-decoration: none;
 }
 
-.master {
+nav > div > p {
+  color: white;
+}
+
+.navLeftSide {
+  border: 0px solid red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30vh;
+}
+
+.navRightSide {
+  border: 0px solid greenyellow;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5vh;
 }
 
 .divBattery {
   background-color: rgb(238, 176, 61);
+  padding: 2% 4%;
+  border: 1vh solid rgb(177, 120, 46);
+
   display: flex;
+  align-items: center;
+  gap: 5vh;
 }
 
 .divPlastic {
   background-color: rgb(165, 94, 94);
+  padding: 2% 4%;
+  border: 1vh solid rgb(186, 47, 47);
+
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
+  gap: 5vh;
 }
 
 .divPaper {
   background-color: rgb(98, 98, 171);
+  padding: 2% 4%;
+  border: 1vh solid rgb(47, 49, 186);
+
   display: flex;
+  align-items: center;
+  gap: 5vh;
 }
 
 .divGlass {
   background-color: rgb(120, 197, 126);
+  padding: 2% 4%;
+  border: 1vh solid rgb(55, 111, 36);
+
   display: flex;
   flex-direction: row-reverse;
+  align-items: center;
+  gap: 5vh;
 }
 
 .imgLeft {
-  max-width: 25%;
+  min-width: 20vh;
+  max-width: 20vh;
+
+  min-height: 20vh;
+  max-height: 20vh;
+
   border: 3px solid black;
   border-radius: 100%;
   border-style: dashed;
-  width: 30vh;
-  height: 30vh;
 
   display: flex;
   align-items: center;
@@ -73,12 +116,15 @@ nav > a {
 }
 
 .imgRight {
-  max-width: 25%;
+  min-width: 20vh;
+  max-width: 20vh;
+
+  min-height: 20vh;
+  max-height: 20vh;
+
   border: 3px solid black;
   border-radius: 100%;
   border-style: dashed;
-  width: 30vh;
-  height: 30vh;
 
   display: flex;
   align-items: center;
