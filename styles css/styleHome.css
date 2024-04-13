@@ -1,43 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 5%;
+}
+
+footer {
+  height: 5%;
+  width: 100%;
+
+  background-color: blueviolet;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .navigation {
   background-color: black;
-  top: 0%;
+  position: fixed;
+  width: 100%;
+  height: 5%;
 
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
+
 nav > a {
   color: white;
   text-decoration: none;
 }
+
 .master {
 }
+
 .divBattery {
   background-color: rgb(238, 176, 61);
   display: flex;
 }
+
 .divPlastic {
   background-color: rgb(165, 94, 94);
   display: flex;
   flex-direction: row-reverse;
 }
+
 .divPaper {
   background-color: rgb(98, 98, 171);
   display: flex;
 }
+
 .divGlass {
   background-color: rgb(120, 197, 126);
   display: flex;
   flex-direction: row-reverse;
 }
+
 .imgLeft {
   max-width: 25%;
-  border: 1px solid black;
+  border: 3px solid black;
+  border-radius: 100%;
+  border-style: dashed;
+  width: 30vh;
+  height: 30vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 .imgRight {
   max-width: 25%;
-  border: 1px solid white;
+  border: 3px solid black;
+  border-radius: 100%;
+  border-style: dashed;
+  width: 30vh;
+  height: 30vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 img {
-  max-width: 100%;
-  max-height: 100%;
+  max-width: 50%;
+  max-height: 50%;
 }
