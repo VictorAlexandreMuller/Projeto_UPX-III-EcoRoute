@@ -1,7 +1,7 @@
 .divBattery {
-  background-color: rgb(238, 176, 61);
+  background-color: rgb(154, 240, 151);
   padding: 2% 4%;
-  border: 1vh solid rgb(177, 120, 46);
+  border: 1vh solid rgb(15, 146, 22);
 
   display: flex;
   align-items: center;
@@ -9,9 +9,10 @@
 }
 
 .divPlastic {
-  background-color: rgb(165, 94, 94);
+  background-color: rgb(83, 73, 175);
   padding: 2% 4%;
-  border: 1vh solid rgb(186, 47, 47);
+  border: 1vh solid rgb(147, 217, 219);
+  color: white;
 
   display: flex;
   flex-direction: row-reverse;
@@ -20,9 +21,9 @@
 }
 
 .divPaper {
-  background-color: rgb(98, 98, 171);
+  background-color: rgb(154, 240, 151);
   padding: 2% 4%;
-  border: 1vh solid rgb(47, 49, 186);
+  border: 1vh solid rgb(15, 146, 22);
 
   display: flex;
   align-items: center;
@@ -30,9 +31,10 @@
 }
 
 .divGlass {
-  background-color: rgb(120, 197, 126);
+  background-color: rgb(83, 73, 175);
   padding: 2% 4%;
-  border: 1vh solid rgb(55, 111, 36);
+  border: 1vh solid rgb(147, 217, 219);
+  color: white;
 
   display: flex;
   flex-direction: row-reverse;
