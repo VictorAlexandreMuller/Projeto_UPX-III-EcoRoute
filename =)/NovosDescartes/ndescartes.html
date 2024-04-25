@@ -7,103 +7,60 @@
     <link rel="stylesheet" href="ndescartes.css" />
   </head>
   <body>
-    <div class="gradient-container">
-      <div class="grid-container">
-        <header class="menu-superior">
-          <div class="login-registro">
-            <button>
-              <p>Novos Descartes</p>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                stroke-width="4"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M14 5l7 7m0 0l-7 7m7-7H3"
-                ></path>
-              </svg>
-            </button>
-          </div>
-          <div class="sobre-nos">
-            <button>
-              <span class="box"> Meus Descartes </span>
-            </button>
-          </div>
-          <div class="eco-route">
-            <button class="button" data-text="Awesome">
-              <span class="actual-text">&nbsp;ECORoute&nbsp;</span>
-              <span aria-hidden="true" class="hover-text"
-                >&nbsp;ECORoute&nbsp;</span
-              >
-            </button>
-          </div>
-        </header>
-      </div>
-      <main>
-        <div class="divDoTexto">
-          <p>
-            • Reciclar é mais do que um gesto, é um compromisso com nosso
-            planeta.
-          </p>
-          <p>
-            • Cada item separado para reciclagem é uma pequena vitória contra o
-            desperdício e a poluição.
-          </p>
-          <p>
-            • Agradeçamos a cada um que dedica tempo e esforço para reciclar.
-          </p>
-          <p>
-            • Juntos, estamos construindo um futuro mais sustentável para todos.
-          </p>
+    <div class="divDoTexto">
+      <p>
+        • Reciclar é mais do que um gesto, é um compromisso com nosso planeta.
+      </p>
+      <p>
+        • Cada item separado para reciclagem é uma pequena vitória contra o
+        desperdício e a poluição.
+      </p>
+      <p>• Agradeçamos a cada um que dedica tempo e esforço para reciclar.</p>
+      <p>
+        • Juntos, estamos construindo um futuro mais sustentável para todos.
+      </p>
+    </div>
+    <div class="divDeBaixoDoTexto">
+      <!-- <img src="Imagensndescartes/Recicle.png" alt="Recicle" /> -->
+      <form class="form">
+        <div class="flex">
+          <label>
+            <input class="input" type="text" placeholder="" required="" />
+            <span>Seu Usuário</span>
+          </label>
+
+          <label>
+            <input class="input" type="text" placeholder="" required="" />
+            <span>CPF</span>
+          </label>
+
+          <label>
+            <input class="input" type="email" placeholder="" required="" />
+            <span>Cidade/CEP</span>
+          </label>
+
+          <label>
+            <input class="input" placeholder="" type="tel" required="" />
+            <span>Produto para Descarte</span>
+          </label>
+          <label>
+            <textarea
+              class="input01"
+              placeholder=""
+              rows="3"
+              required=""
+            ></textarea>
+            <span>Informações Adicionais</span>
+          </label>
+
+          <button href="#" class="fancy">
+            <span class="top-key"></span>
+            <span class="text">Enviar Agendamento do Descarte</span>
+            <span class="bottom-key-1"></span>
+            <span class="bottom-key-2"></span>
+          </button>
         </div>
-        <div class="divDeBaixoDoTexto">
-        <!-- <img src="Imagensndescartes/Recicle.png" alt="Recicle" /> --> 
-          <form class="form">
-            <div class="flex">
-              <label>
-                <input class="input" type="text" placeholder="" required="" />
-                <span>Seu Usuário</span>
-              </label>
-
-              <label>
-                <input class="input" type="text" placeholder="" required="" />
-                <span>CPF</span>
-              </label>
-
-              <label>
-                <input class="input" type="email" placeholder="" required="" />
-                <span>Cidade/CEP</span>
-              </label>
-
-              <label>
-                <input class="input" placeholder="" type="tel" required="" />
-                <span>Produto para Descarte</span>
-              </label>
-              <label>
-                <textarea
-                  class="input01"
-                  placeholder=""
-                  rows="3"
-                  required=""
-                ></textarea>
-                <span>Informações Adicionais</span>
-              </label>
-
-              <button href="#" class="fancy">
-                <span class="top-key"></span>
-                <span class="text">Enviar Agendamento do Descarte</span>
-                <span class="bottom-key-1"></span>
-                <span class="bottom-key-2"></span>
-              </button>
-            </div>
-          </form>
-        </div>
-      </main>
+      </form>
     </div>
   </body>
 </html>

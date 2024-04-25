@@ -1,3 +1,7 @@
+// function log() {
+//   console.log("lol");
+// }
+
 // AJAX ------------------------------------------------------------------------
 // -----------------------------------------------------------------------------
 
@@ -8,14 +12,17 @@ function carregarConteudo(url) {
     .then((dados) => {
       let pagina = document.querySelector(".conteudo");
       pagina.innerHTML = dados;
+
       // Busca todos os scripts dentro do HTML inserido
       let scripts = pagina.querySelectorAll("script[src]");
+
       // Carrega e executa cada script
       scripts.forEach((script) => {
         let novoScript = document.createElement("script");
         novoScript.src = script.src;
         document.body.appendChild(novoScript);
       });
+
       // Verifica se há scripts embutidos no HTML inserido e executa-os
       let scriptsEmbutidos = pagina.querySelectorAll("script:not([src])");
       scriptsEmbutidos.forEach((script) => {
