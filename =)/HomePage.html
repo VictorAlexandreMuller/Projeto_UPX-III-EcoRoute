@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page | EcoRoute</title>
     <link rel="stylesheet" href="HeaderFooter.css" />
-    <!-- <link rel="stylesheet" href="HomePageStyles.css" /> -->
     <link rel="stylesheet" href="Geral/geral.css" />
+    <link rel="stylesheet" href="Login/login.css" />
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="" />
+    <link rel="stylesheet" href="" />
   </head>
   <body>
     <header>
       <nav class="navBar">
         <div>
-          <button>
+          <button href="Login/login.html">
             <p>Login | Registre-se</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,12 +34,16 @@
           </button>
         </div>
         <div>
-          <button>
+          <button href="emDesenvolvimento">
             <p>Sobre nós</p>
           </button>
         </div>
         <div>
-          <button class="buttonEcoRoute" data-text="Awesome">
+          <button
+            class="buttonEcoRoute"
+            data-text="Awesome"
+            href="Geral/geral.html"
+          >
             <span>&nbsp;ECORoute&nbsp;</span>
             <span aria-hidden="true" class="hover-text"
               >&nbsp;ECORoute&nbsp;</span
@@ -49,4 +56,5 @@
     <footer class="rodape">© EcoRoute 2024</footer>
   </body>
   <script src="HomePageAjax.js"></script>
+  <script src="Geral/geral.js"></script>
 </html>

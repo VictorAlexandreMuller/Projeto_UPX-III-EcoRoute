@@ -24,7 +24,7 @@ body {
   text-shadow: 3px 3px 20px rgb(42, 42, 42);
   color: #ffffff;
   margin-top: 2%;
-  margin-left: 12.5%;
+  margin-left: 11%;
   letter-spacing: 4px;
 }
 
@@ -48,7 +48,7 @@ body {
 }
 
 .saibaMais > button {
-  margin-right: 12.5%;
+  margin-right: 12%;
 }
 
 .custom-button {
@@ -137,8 +137,9 @@ body {
 
 .miniCard {
   background: linear-gradient(to right, #024059, #026873, #04bf8a, #025940);
-  width: 20%;
-  height: 75%;
+  width: 21%;
+  height: 70%;
+  padding: 1%;
   border-radius: 15px;
   text-align: center;
   cursor: pointer;

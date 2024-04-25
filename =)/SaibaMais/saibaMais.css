@@ -1,15 +1,16 @@
-* {
+/* .* {
   margin: 0;
   padding: 0;
-}
+} */
 
-html {
+/* html {
   background: linear-gradient(to right, #024059, #026873, #04bf8a, #025940);
-}
+} */
 
 /* -----------------------BODY DOMINIUM------------------------ */
 /* -------------------HEADER + MAIN + FOOTER-------------------- */
-body {
+
+.bodySaibaMais {
   display: table;
   width: 100%;
   justify-content: space-between;
@@ -18,7 +19,7 @@ body {
 }
 
 /* -----------------------HEADER DOMINIUM------------------------ */
-header {
+/* header {
   width: 100%;
   position: sticky;
   top: 0;
@@ -38,25 +39,23 @@ header {
   background-color: rgb(239, 239, 239);
   color: rgb(27, 34, 105);
   padding: 2% 10%;
-  
 }
 
-
 .logo {
-    font-size: 1.5em;
-    text-align: left;
+  font-size: 1.5em;
+  text-align: left;
 }
 
 .sobre-nos {
-    color: rgb(27, 34, 105); /* A cor foi alterada para corresponder ao texto */
-    text-decoration: none;
-    margin: 0 auto;
-    text-align: center;
+  color: rgb(27, 34, 105);
+  text-decoration: none;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .login-registro {
-    text-align: right; /* Ajuste para o canto direito */
-    font-size: 0.9em;
+  text-align: right;
+  font-size: 0.9em;
 }
 .custom-btn {
   width: relative;
@@ -64,15 +63,14 @@ header {
   color: #fff;
   border-radius: 5px;
   padding: 10px 25px;
-  font-family: 'Arial';
+  font-family: "Arial";
   font-weight: 500;
   background: transparent;
   cursor: pointer;
   position: relative;
   display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5),
-   7px 7px 20px 0px rgba(0,0,0,.1),
-   4px 4px 5px 0px rgba(0,0,0,.1);
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   outline: none;
   font-size: 15px;
 }
@@ -84,7 +82,6 @@ header {
 }
 
 .navLeftSide {
-  border: 0px solid red; /* alternar entre 0px e 1px para auxiliar no desenvolvimento */
   padding: 0.5%;
 
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -99,13 +96,12 @@ header {
   margin: 0;
   margin-top: 0px;
   height: auto;
-  background:transparent;
+  background: transparent;
   padding: 0;
   border: none;
   cursor: pointer;
 }
 
-/* button styling */
 .button-eco {
   --border-right: 6px;
   --text-stroke-color: rgba(184, 186, 255, 0.6);
@@ -120,7 +116,7 @@ header {
   color: transparent;
   -webkit-text-stroke: 1px var(--text-stroke-color);
 }
-/* this is the text, when you hover on button */
+
 .hover-text {
   position: absolute;
   box-sizing: border-box;
@@ -133,33 +129,28 @@ header {
   transition: 0.5s;
   -webkit-text-stroke: 1px var(--animation-color);
 }
-/* hover */
+
 .button-eco:hover .hover-text {
   width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color))
+  filter: drop-shadow(0 0 23px var(--animation-color));
 }
 
-
-
 .navRightSide {
-  border: 0px solid red; /* alternar entre 0px e 1px para auxiliar no desenvolvimento */
-
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5vh;
-}
-
+} */
 
 /* -----------------------MAIN DOMINIUM------------------------ */
 
-main {
+/* main {
   background: linear-gradient(to right, #024059, #026873, #04bf8a, #025940);
   margin-top: 1%;
   margin-bottom: 5%;
-}
+} */
 
 /* div do conteudo de apresentacao */
 .apresentacao {
@@ -250,7 +241,7 @@ aplicar o efeito e mostrar o back-card */
   height: 30vh;
   width: 40vh;
 
-  font-size: 1.0rem;
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: white;
@@ -288,4 +279,3 @@ aplicar o efeito e mostrar o back-card */
   justify-content: center;
   align-items: center;
 }
-
