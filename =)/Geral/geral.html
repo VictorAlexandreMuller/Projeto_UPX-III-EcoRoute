@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="geral.css" />
+    <!-- <link rel="stylesheet" href="geral.css" /> -->
   </head>
   <body>
     <div class="displayGeral">
@@ -15,7 +15,11 @@
         <p>Guiando seu Eletrônico ao Destino Verde</p>
       </div>
       <div class="saibaMais">
-        <button class="custom-button" href="SaibaMais/saibaMais.html">
+        <button
+          class="custom-button"
+          href="../SaibaMais/saibaMais.html"
+          onclick="log()"
+        >
           Saiba mais
         </button>
       </div>
@@ -41,5 +45,10 @@
       </div>
     </div>
   </body>
-  <script src="Geral/geral.js"></script>
+  <!-- <script src="geral.js"></script> -->
+  <script>
+    function log() {
+      console.log("lol");
+    }
+  </script>
 </html>

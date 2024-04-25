@@ -1,9 +1,7 @@
-document.addEventListener("DOMContentLoaded", function() {
-   
-    var entrarBtn = document.getElementById("entrar-btn");
+document.addEventListener("DOMContentLoaded", function () {
+  var entrarBtn = document.getElementById("entrar-btn");
 
-    entrarBtn.addEventListener("click", function() {
-       
-        window.location.href = "materiais.html";
-    });
+  entrarBtn.addEventListener("click", function () {
+    window.location.href = "../PósLogin/poslogin.html";
+  });
 });

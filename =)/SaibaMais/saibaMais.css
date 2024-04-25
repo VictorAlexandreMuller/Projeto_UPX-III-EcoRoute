@@ -10,13 +10,13 @@
 /* -----------------------BODY DOMINIUM------------------------ */
 /* -------------------HEADER + MAIN + FOOTER-------------------- */
 
-.bodySaibaMais {
+/* .bodySaibaMais {
   display: table;
   width: 100%;
   justify-content: space-between;
   flex-direction: column;
   position: relative;
-}
+} */
 
 /* -----------------------HEADER DOMINIUM------------------------ */
 /* header {
@@ -154,18 +154,16 @@
 
 /* div do conteudo de apresentacao */
 .apresentacao {
-  border: 0px solid red; /* alternar entre 0px e 1px para auxiliar no desenvolvimento */
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-size: 1.5rem;
   text-align: center;
   padding: 1% 5%;
+  margin-top: 2%;
 }
 
 /* div com a grid de cards */
 .placeGrid {
-  border: 0px solid white; /* alternar entre 0px e 1px para auxiliar no desenvolvimento */
-
   padding: 4%;
 
   display: flex;
@@ -248,21 +246,25 @@ aplicar o efeito e mostrar o back-card */
 
   opacity: 1;
   transform: rotate(0deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* div do conteudo que ficará abaixo dos cards */
 .conteudoDeBaixo {
-  border: 0px solid cyan; /* alternar entre 0px e 1px para auxiliar no desenvolvimento */
   font-family: Arial, Helvetica, sans-serif;
   color: white;
   font-size: 1.5rem;
   text-align: center;
   padding: 1% 5%;
+  margin-bottom: 4%;
 }
 
 /* -----------------------FOOTER DOMINIUM------------------------ */
 
-.rodape {
+/* .rodape {
   background-color: black;
   color: white;
 
@@ -278,4 +280,4 @@ aplicar o efeito e mostrar o back-card */
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
