@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Adiciona manipuladores de eventos para os links
-let links = document.querySelectorAll("a");
+let links = document.querySelectorAll("button");
 links.forEach((element) => {
   element.addEventListener("click", (event) => {
     event.preventDefault();
