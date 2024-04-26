@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: table;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+}
+
+main {
+  background: linear-gradient(to right, #024059, #026873, #04bf8a, #025940);
+  padding-top: calc(5vh + 75px);
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+}
+
+/* (Header) NavBar fixada ao topo da página */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgb(239, 239, 239);
+  color: rgb(27, 34, 105);
+  padding: 1.8% 10%;
+}
+
+/* Botão Login/Register */
+nav > div > button {
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  --primary-color: #111;
+  --hovered-color: #6d9371;
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* Efeito verde do botão Login/Register */
+nav > div > button::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  left: 0;
+  bottom: -7px;
+  background: var(--hovered-color);
+  height: 2px;
+  transition: 0.3s ease-out;
+}
+
+/* Carregamento da cor verde */
+nav > div > button:hover::after {
+  width: 100%;
+}
+
+/* Seta do botão LOGIN/REGISTRE-SE */
+nav > div > button svg {
+  width: 15px;
+  transition: all 0.2s ease 0.2s;
+}
+
+/* Hover da seta do botão LOGIN/REGISTRE-SE */
+nav > div > button:hover svg {
+  transform: translateX(4px);
+  color: var(--hovered-color);
+}
+
+/* Posiciona e estiliza o botão ECOROUTE */
+.buttonEcoRoute {
+  margin: 0;
+  margin-top: 0px;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+
+  --border-right: 6px;
+  --text-stroke-color: rgba(184, 186, 255, 0.6);
+  --animation-color: #518b69;
+  --fs-size: 2em;
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: var(--fs-size);
+  font-family: "Arial";
+  position: relative;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--text-stroke-color);
+}
+
+/* Une os dois Span ECOROUTE da NavBar para criar o efeito */
+.hover-text {
+  position: absolute;
+  box-sizing: border-box;
+  content: attr(data-text);
+  color: var(--animation-color);
+  width: 0%;
+  inset: 0;
+  border-right: var(--border-right) solid var(--animation-color);
+  overflow: hidden;
+  transition: 0.5s;
+  -webkit-text-stroke: 1px var(--animation-color);
+}
+
+/* Cria o efeito verde que percorre o botão ECOROUTE */
+.buttonEcoRoute:hover .hover-text {
+  width: 100%;
+  filter: drop-shadow(0 0 23px var(--animation-color));
+}
+
+footer {
+  height: 5vh;
+  width: 100%;
+}
+
+/* (Footer) Estilo do rodapé */
+.rodape {
+  background-color: rgb(239, 239, 239);
+  color: black;
+
+  font-weight: 600;
+  font-size: 1em;
+  font-family: "Arial";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
