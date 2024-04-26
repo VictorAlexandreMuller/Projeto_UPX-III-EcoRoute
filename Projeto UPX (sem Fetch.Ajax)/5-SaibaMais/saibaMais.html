@@ -3,15 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sobre Nós | EcoRoute</title>
+    <title>Saiba Mais | EcoRoute</title>
+    <link rel="icon" href="../0-HeaderFooter/icon/ecoIcon.png" />
+    <link rel="stylesheet" href="../0-HeaderFooter/headerFooter.css" />
     <link rel="stylesheet" href="saibaMais.css" />
-    <link rel="stylesheet" href="../HeaderFooter.css" />
   </head>
   <body>
     <header>
       <nav class="navBar">
         <div>
-          <button href="NovosDescartes/ndescartes.html">
+          <button
+            id="actionNavButtonLoginRegister"
+            href="../2-Login/login.html"
+          >
             <p>Login | Registre-se</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +34,7 @@
           </button>
         </div>
         <div>
-          <button href="emDesenvolvimento">
+          <button href="emDesenvolvimento" id="actionNavButtonSobreNos">
             <p>Sobre nós</p>
           </button>
         </div>
@@ -38,7 +42,8 @@
           <button
             class="buttonEcoRoute"
             data-text="Awesome"
-            href="Geral/geral.html"
+            href="../index.html"
+            id="actionNavButtonEcoRoute"
           >
             <span>&nbsp;ECORoute&nbsp;</span>
             <span aria-hidden="true" class="hover-text"
@@ -67,8 +72,8 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensInform/womanBattery.png"
-              alt="Battery"
+              src="../5-SaibaMais/Imagens-SaibaMais/woman.png"
+              alt="BatteryWoman"
               id="img1x1"
             />
             <div class="secondContentCard">
@@ -82,7 +87,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensInform/devices.png"
+              src="../5-SaibaMais/Imagens-SaibaMais/devices.png"
               alt="Devices"
               id="img1x2"
             />
@@ -97,7 +102,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensInform/car.png"
+              src="../5-SaibaMais/Imagens-SaibaMais/car.png"
               alt="Car"
               id="img1x1"
             />
@@ -111,7 +116,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensInform/oilLamp.png"
+              src="../5-SaibaMais/Imagens-SaibaMais/lamp.png"
               alt="Lamp"
               id="img1x1"
             />
@@ -126,7 +131,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensInform/oilLamp.png"
+              src="../5-SaibaMais/Imagens-SaibaMais/lamp.png"
               alt="Lamp"
               id="img1x1"
             />
@@ -136,7 +141,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensInform/oilLamp.png"
+              src="../5-SaibaMais/Imagens-SaibaMais/lamp.png"
               alt="Lamp"
               id="img1x1"
             />
@@ -157,4 +162,5 @@
     </main>
     <footer class="rodape">© EcoRoute 2024</footer>
   </body>
+  <script src="../0-HeaderFooter/headerFooter.js"></script>
 </html>

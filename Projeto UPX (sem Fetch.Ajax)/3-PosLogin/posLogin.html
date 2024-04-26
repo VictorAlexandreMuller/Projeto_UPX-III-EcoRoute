@@ -3,16 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="poslogin.css" />
-    <link rel="stylesheet" href="../HeaderFooter.css" />
+    <title>Produtos | EcoRoute</title>
+    <link rel="icon" href="../0-HeaderFooter/icon/ecoIcon.png" />
+    <link rel="stylesheet" href="posLogin.css" />
+    <link rel="stylesheet" href="../0-HeaderFooter/headerFooter.css" />
   </head>
-
   <body>
     <header>
       <nav class="navBar">
         <div>
-          <button href="NovosDescartes/ndescartes.html">
+          <button
+            href="../2-Login/login.html"
+            id="actionNavButtonLoginRegister"
+          >
             <p>Login | Registre-se</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,15 +34,16 @@
           </button>
         </div>
         <div>
-          <button href="emDesenvolvimento">
+          <button href="emDesenvolvimento" id="actionNavButtonSobreNos">
             <p>Sobre nós</p>
           </button>
         </div>
         <div>
           <button
+            href="../index.html"
+            id="actionNavButtonEcoRoute"
             class="buttonEcoRoute"
             data-text="Awesome"
-            href="Geral/geral.html"
           >
             <span>&nbsp;ECORoute&nbsp;</span>
             <span aria-hidden="true" class="hover-text"
@@ -60,7 +64,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensPosLogin/despertador.png"
+              src="./Imagens-PosLogin/despertador.png"
               alt="Battery"
               id="img1x1"
             />
@@ -72,7 +76,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensPosLogin/tv.png"
+              src="./Imagens-PosLogin/tv.png"
               alt="tv"
               id="img1x1"
             />
@@ -84,7 +88,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensPosLogin/batcarro.png"
+              src="./Imagens-PosLogin/batcarro.png"
               alt="batcarro"
               id="img1x1"
             />
@@ -94,7 +98,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensPosLogin/pilha.png"
+              src="./Imagens-PosLogin/pilha.png"
               alt="pilha"
               id="img1x1"
             />
@@ -104,7 +108,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensPosLogin/placa-de-circuito.png"
+              src="./Imagens-PosLogin/circuito.png"
               alt="placa-de-circuito"
               id="img1x1"
             />
@@ -116,7 +120,7 @@
           <div class="card">
             <img
               class="firstContentCard"
-              src="ImagensPosLogin/celular.png"
+              src="./Imagens-PosLogin/celular.png"
               alt="celular"
               id="img1x1"
             />
@@ -129,4 +133,5 @@
     </main>
     <footer class="rodape">© EcoRoute 2024</footer>
   </body>
+  <script src="../0-HeaderFooter/headerFooter.js"></script>
 </html>

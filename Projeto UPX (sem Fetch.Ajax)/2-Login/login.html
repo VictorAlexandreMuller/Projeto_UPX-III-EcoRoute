@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Degradê Horizontal com Formulário</title>
-    <link rel="stylesheet" href="login.css" />
-    <link rel="stylesheet" href="../HeaderFooter.css" />
+    <title>Login & Register | EcoRoute</title>
+    <link rel="icon" href="../0-HeaderFooter/icon/ecoIcon.png" />
+    <link rel="stylesheet" href="../0-HeaderFooter/headerFooter.css" />
+    <link rel="stylesheet" href="../2-Login/login.css" />
   </head>
   <body>
     <header>
       <nav class="navBar">
         <div>
-          <button href="NovosDescartes/ndescartes.html">
+          <button href="./login.html" id="actionNavButtonLoginRegister">
             <p>Login | Registre-se</p>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +31,7 @@
           </button>
         </div>
         <div>
-          <button href="emDesenvolvimento">
+          <button href="emDesenvolvimento" id="actionNavButtonSobreNos">
             <p>Sobre nós</p>
           </button>
         </div>
@@ -38,7 +39,8 @@
           <button
             class="buttonEcoRoute"
             data-text="Awesome"
-            href="Geral/geral.html"
+            href="../index.html"
+            id="actionNavButtonEcoRoute"
           >
             <span>&nbsp;ECORoute&nbsp;</span>
             <span aria-hidden="true" class="hover-text"
@@ -51,14 +53,18 @@
     <main>
       <div class="testeBodyPage">
         <div>
-          <button href="Geral/geral.html" class="custom-btn">
+          <button
+            class="custom-btn"
+            id="actionButtonVoltaPagina"
+            href="../index.html"
+          >
             <p>Voltar à página inicial</p>
           </button>
         </div>
         <div class="main">
           <input type="checkbox" id="chk" aria-hidden="true" />
           <div class="login">
-            <form class="form">
+            <form class="form" id="loginForm">
               <label for="chk" aria-hidden="true">Login</label>
               <input
                 class="input"
@@ -74,7 +80,12 @@
                 placeholder="Insira sua senha"
                 required=""
               />
-              <button id="entrar-btn">Entrar</button>
+              <button
+                href="../3-PosLogin/posLogin.html"
+                id="actionButtonEntrar"
+              >
+                Entrar
+              </button>
             </form>
           </div>
           <div class="register">
@@ -109,5 +120,6 @@
     </main>
     <footer class="rodape">© EcoRoute 2024</footer>
   </body>
-  <script src="principal.js"></script>
+  <script src="../0-HeaderFooter/headerFooter.js"></script>
+  <script src="./login.js"></script>
 </html>

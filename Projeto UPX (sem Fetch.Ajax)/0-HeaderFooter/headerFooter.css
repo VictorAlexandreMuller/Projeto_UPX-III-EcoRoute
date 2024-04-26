@@ -26,6 +26,11 @@ main {
   height: 100%;
 }
 
+/* a {
+  text-decoration: none;
+  color: inherit;
+} */
+
 /* (Header) NavBar fixada ao topo da página */
 .navBar {
   display: flex;

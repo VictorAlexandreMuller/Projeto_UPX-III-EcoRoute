@@ -1,3 +1,8 @@
+/* a {
+  text-decoration: none;
+  color: inherit;
+} */
+
 .testeBodyPage {
   padding: 2%;
   margin: 1%;
@@ -34,7 +39,7 @@
   overflow: hidden;
   border-radius: 14px;
   box-shadow: 7px 7px 10px 3px #24004628;
-  background-image: url("ImagensPrincipal/Environment-bro.png");
+  background-image: url("Imagens-Login/ecoBackground.png");
   background-size: cover;
   background-position: center;
 }
