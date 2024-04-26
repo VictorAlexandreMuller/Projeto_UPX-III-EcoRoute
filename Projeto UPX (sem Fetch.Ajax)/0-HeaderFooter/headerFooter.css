@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+html {
+  background: linear-gradient(to right, #024059, #026873, #04bf8a, #025940);
+}
+
 body {
   display: table;
   width: 100%;
@@ -11,6 +15,7 @@ body {
 header {
   width: 100%;
   position: fixed;
+  z-index: 1; /* este index utilizado junto à position faz com que os efeitos não sobreponham a barra de navegacao */
 }
 
 main {
@@ -20,6 +25,11 @@ main {
   width: 100%;
   height: 100%;
 }
+
+/* a {
+  text-decoration: none;
+  color: inherit;
+} */
 
 /* (Header) NavBar fixada ao topo da página */
 .navBar {

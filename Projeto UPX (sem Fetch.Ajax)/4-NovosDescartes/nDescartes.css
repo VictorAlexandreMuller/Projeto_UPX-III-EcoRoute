@@ -1,0 +1,234 @@
+.divMain {
+  margin-top: 5vh;
+  padding: 1% 2%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7vh;
+}
+
+.firstPlace {
+  width: 100%;
+  padding: 0.5%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5%;
+}
+
+.textinho {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.1)
+    ),
+    rgb(239, 239, 239);
+  width: 20%;
+  transition: 400ms;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 1%;
+  cursor: default;
+}
+
+.textinho > p {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.3em;
+  text-align: center;
+  margin: 2%;
+}
+
+.textinho:hover {
+  transform: scale(1.1) rotate(-2.5deg);
+}
+
+.secondPlace {
+  width: 100%;
+  height: auto;
+  padding: 1%;
+  margin-bottom: 10vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8vw;
+}
+
+.imagemRecicle {
+  max-width: 50vh;
+  max-height: 50vh;
+  filter: drop-shadow(10px 10px 20px rgb(86, 117, 86));
+
+  position: relative;
+  top: -50vh;
+  transform: translateY(100%);
+  transition: 1.5s ease;
+}
+
+.formBox {
+  background: linear-gradient(to right, #778672, #748c61, #81c583, #a6e991);
+  box-shadow: 15px 15px 25px rgb(71, 71, 71);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 2%;
+}
+
+.flex {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5vh;
+}
+
+.textInputArea {
+  width: 30vh;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid #355891;
+  border-radius: 5px;
+}
+
+#formArea label {
+  position: relative;
+}
+
+.normalTextArea {
+  width: 30vh;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid #355891;
+  border-radius: 5px;
+}
+
+.normalTextArea + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: #355891;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.normalTextArea:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.normalTextArea:focus + span,
+.normalTextArea:valid + span,
+.normalTextArea:hover + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.normalTextArea:valid + span {
+  color: green;
+}
+
+.textInputArea + span {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  color: #355891;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.textInputArea:placeholder-shown + span {
+  top: 40px;
+  font-size: 0.9em;
+}
+
+.textInputArea:focus + span,
+.textInputArea:valid + span,
+.textInputArea:hover + span {
+  top: 50px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.textInputArea:valid + span {
+  color: green;
+}
+
+.fancy {
+  background-color: white;
+  border: 2px solid #355891;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: #355891;
+  cursor: pointer;
+
+  width: 45vh;
+
+  font-weight: bold;
+  letter-spacing: 2px;
+  outline: none;
+  overflow: visible;
+  padding: 8px 0px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+
+  display: inline-block;
+}
+
+.fancy::before {
+  content: " ";
+  width: 1.7rem;
+  height: 2px;
+  background: #355891;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform: translateX(230%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  font-size: 10px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  transition: all 0.3s ease-in-out;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: #355891;
+  transform: translateX(30%);
+}
+
+.fancy:hover {
+  color: #355891;
+  background: #5f82a9;
+}
+
+.fancy:hover::before {
+  width: 1.5rem;
+  background: #355891;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}

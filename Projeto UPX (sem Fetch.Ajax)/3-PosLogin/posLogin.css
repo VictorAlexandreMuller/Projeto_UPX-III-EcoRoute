@@ -1,0 +1,99 @@
+.displayProdutosAceitos {
+  padding: 0.5% 1%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.apresentacao {
+  text-align: center;
+  padding: 1% 5%;
+  text-shadow: 3px 3px 20px rgb(42, 42, 42);
+}
+
+.apresentacao > p {
+  color: white;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+}
+
+.placeGrid {
+  padding: 4%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 100px;
+}
+
+/* tamanho das imagens dentro dos cards */
+#img1x1 {
+  max-width: 22vh;
+  max-height: 22vh;
+}
+
+/* molde do card */
+.card {
+  background-color: #279bfa;
+  border: 10px solid #2c6170;
+  border-radius: 30px;
+
+  padding: 4vh;
+  height: 30vh;
+  width: 40vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: all 1.9s;
+}
+
+/* ação do cursor pelo card para 
+aplicar o efeito e mostrar o back-card */
+/* A propriedade transforme SCALE faz 
+  com que o "HEIGHT" e "WIDTH" da classe 
+  ".card" cresça em tantos % */
+.card:hover {
+  background: #279bfa;
+
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+/* propriedades do front-card */
+.firstContentCard {
+  transition: all 0.8s;
+  opacity: 1;
+}
+
+/* ato de apenas esconder o front-card*/
+.card:hover .firstContentCard {
+  height: 0px;
+  opacity: 0;
+}
+
+/* back-card escondido */
+.secondContentCard {
+  opacity: 0;
+  transition: all 0.8s;
+  font-size: 0px;
+  transform: rotate(90deg) scale(-1);
+}
+
+/* propriedades do back-card */
+.card:hover .secondContentCard {
+  padding: 4vh;
+  height: 30vh;
+  width: 40vh;
+
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+
+  opacity: 1;
+  transform: rotate(0deg);
+}
