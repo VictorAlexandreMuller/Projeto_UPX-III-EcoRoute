@@ -1,151 +1,83 @@
-.menu-superior {
-  display: flex;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  justify-content: space-between;
-  background-color: rgb(239, 239, 239);
-  color: rgb(27, 34, 105);
-  padding: 2% 10%;
-}
-
-.logo {
-  font-size: 1.5em;
-  text-align: left;
-}
-
-.sobre-nos {
-  color: rgb(27, 34, 105); /* A cor foi alterada para corresponder ao texto */
-  text-decoration: none;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.login-registro {
-  text-align: right; /* Ajuste para o canto direito */
-  font-size: 0.9em;
-}
-
-/*.img-lateral {
-      margin-top: 80px;
-      margin-right:750px;
-  }
-*/
-
-.button {
-  margin: 0;
-  margin-top: 0px;
-  height: auto;
-  background: transparent;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-}
-
-.button {
-  --border-right: 6px;
-  --text-stroke-color: rgba(184, 186, 255, 0.6);
-  --animation-color: #518b69;
-  --fs-size: 2em;
-  letter-spacing: 3px;
-  text-decoration: none;
-  font-size: var(--fs-size);
-  font-family: "Arial";
-  position: relative;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--text-stroke-color);
-}
-
-.hover-text {
-  position: absolute;
-  box-sizing: border-box;
-  content: attr(data-text);
-  color: var(--animation-color);
-  width: 0%;
-  inset: 0;
-  border-right: var(--border-right) solid var(--animation-color);
-  overflow: hidden;
-  transition: 0.5s;
-  -webkit-text-stroke: 1px var(--animation-color);
-}
-
-.button:hover .hover-text {
-  width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color));
-}
-
-main {
-  width: 100%;
-  border: 0px solid red;
-  margin-top: 11vh;
+.divMain {
+  margin-top: 5vh;
+  padding: 1% 2%;
 
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 70px;
+  align-items: center;
+  gap: 7vh;
 }
 
-.divDoTexto {
-  text-align: center;
+.firstPlace {
   width: 100%;
+  padding: 0.5%;
 
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 2.5%;
 }
 
-.divDoTexto > p {
+.textinho {
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.1)
+    ),
+    rgb(239, 239, 239);
+  width: 20%;
+  transition: 400ms;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 1%;
+  cursor: default;
+}
+
+.textinho > p {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 25px;
-  color: #025940;
-  border: 3px solid black;
-  box-shadow: 10px 10px 20px rgb(71, 71, 71);
-  border-radius: 15px;
-  padding: 0.8%;
-  margin: 0;
-  width: 370px;
-  background: rgb(239, 239, 239);
+  font-size: 1.3em;
+  text-align: center;
+  margin: 2%;
 }
 
-.divDeBaixoDoTexto {
+.textinho:hover {
+  transform: scale(1.1) rotate(-2.5deg);
+}
+
+.secondPlace {
   width: 100%;
   height: auto;
+  padding: 1%;
+  margin-bottom: 10vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 140px;
-  border: 0px solid black;
+  gap: 8vw;
 }
 
 .imagemRecicle {
   max-width: 50vh;
   max-height: 50vh;
   filter: drop-shadow(10px 10px 20px rgb(86, 117, 86));
+
+  position: relative;
+  top: -50vh;
+  transform: translateY(100%);
+  transition: 1.5s ease;
 }
 
-.form {
-  height: 50vh;
-  width: 45vh;
+.formBox {
   background: linear-gradient(to right, #778672, #748c61, #81c583, #a6e991);
-  padding: 20px;
+  box-shadow: 15px 15px 25px rgb(71, 71, 71);
   border-radius: 10px;
-  position: relative;
-
   display: flex;
   align-items: center;
-
-  border: 0px solid red;
-  box-shadow: 15px 15px 25px rgb(71, 71, 71);
-}
-
-.message {
-  color: #355891;
-  font-size: 14px;
+  padding: 2%;
 }
 
 .flex {
@@ -154,10 +86,10 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 1.5vh;
 }
 
-.input01 {
+.textInputArea {
   width: 30vh;
   padding: 10px 10px 20px 10px;
   outline: 0;
@@ -165,11 +97,11 @@ main {
   border-radius: 5px;
 }
 
-.form label {
+#formArea label {
   position: relative;
 }
 
-.form label .input {
+.normalTextArea {
   width: 30vh;
   padding: 10px 10px 20px 10px;
   outline: 0;
@@ -177,7 +109,7 @@ main {
   border-radius: 5px;
 }
 
-.form label .input + span {
+.normalTextArea + span {
   position: absolute;
   left: 10px;
   top: 15px;
@@ -187,23 +119,24 @@ main {
   transition: 0.3s ease;
 }
 
-.form label .input:placeholder-shown + span {
+.normalTextArea:placeholder-shown + span {
   top: 15px;
   font-size: 0.9em;
 }
 
-.form label .input:focus + span,
-.form label .input:valid + span {
+.normalTextArea:focus + span,
+.normalTextArea:valid + span,
+.normalTextArea:hover + span {
   top: 30px;
   font-size: 0.7em;
   font-weight: 600;
 }
 
-.form label .input:valid + span {
+.normalTextArea:valid + span {
   color: green;
 }
 
-.form label .input01 + span {
+.textInputArea + span {
   position: absolute;
   left: 10px;
   top: 50px;
@@ -213,19 +146,20 @@ main {
   transition: 0.3s ease;
 }
 
-.form label .input01:placeholder-shown + span {
+.textInputArea:placeholder-shown + span {
   top: 40px;
   font-size: 0.9em;
 }
 
-.form label .input01:focus + span,
-.form label .input01:valid + span {
+.textInputArea:focus + span,
+.textInputArea:valid + span,
+.textInputArea:hover + span {
   top: 50px;
   font-size: 0.7em;
   font-weight: 600;
 }
 
-.form label .input01:valid + span {
+.textInputArea:valid + span {
   color: green;
 }
 
@@ -237,7 +171,7 @@ main {
   color: #355891;
   cursor: pointer;
 
-  width: 100%;
+  width: 45vh;
 
   font-weight: bold;
   letter-spacing: 2px;
@@ -270,7 +204,7 @@ main {
 }
 
 .fancy .text {
-  font-size: 1em;
+  font-size: 1.125em;
   line-height: 1.33333em;
   padding-left: 2em;
   display: block;
@@ -282,36 +216,6 @@ main {
   text-decoration: none;
   color: #355891;
   transform: translateX(30%);
-}
-
-.fancy .top-key {
-  height: 2px;
-  width: 1.5625rem;
-  top: -2px;
-  left: 0.625rem;
-  position: absolute;
-  background: #355891;
-  transition: width 0.5s ease-out, left 0.3s ease-out;
-}
-
-.fancy .bottom-key-1 {
-  height: 2px;
-  width: 1.5625rem;
-  right: 1.875rem;
-  bottom: -2px;
-  position: absolute;
-  background: #355891;
-  transition: width 0.5s ease-out, right 0.3s ease-out;
-}
-
-.fancy .bottom-key-2 {
-  height: 2px;
-  width: 0.625rem;
-  right: 0.625rem;
-  bottom: -2px;
-  position: absolute;
-  background: #355891;
-  transition: width 0.5s ease-out, right 0.3s ease-out;
 }
 
 .fancy:hover {
@@ -327,81 +231,4 @@ main {
 .fancy:hover .text {
   color: white;
   padding-left: 1.5em;
-}
-
-.fancy:hover .top-key {
-  left: -2px;
-  width: 0px;
-}
-
-.fancy:hover .bottom-key-1,
-.fancy:hover .bottom-key-2 {
-  right: 0;
-  width: 0;
-}
-
-button {
-  padding: 0;
-  margin: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-  --primary-color: #111;
-  --hovered-color: #6d9371;
-  position: relative;
-  display: flex;
-  font-weight: 600;
-  font-size: 20px;
-  gap: 0.5rem;
-  align-items: center;
-}
-
-button p {
-  margin: 0;
-  position: relative;
-  font-size: 20px;
-  color: var(--primary-color);
-}
-
-button::after {
-  position: absolute;
-  content: "";
-  width: 0;
-  left: 0;
-  bottom: -7px;
-  background: var(--hovered-color);
-  height: 2px;
-  transition: 0.3s ease-out;
-}
-
-button p::before {
-  position: absolute;
-  /*   box-sizing: border-box; */
-  content: "Login | Registre-se";
-  width: 0%;
-  inset: 0;
-  color: var(--hovered-color);
-  overflow: hidden;
-  transition: 0.3s ease-out;
-}
-
-button:hover::after {
-  width: 100%;
-}
-
-button:hover p::before {
-  width: 100%;
-}
-
-button:hover svg {
-  transform: translateX(4px);
-  color: var(--hovered-color);
-}
-
-button svg {
-  color: var(--primary-color);
-  transition: 0.2s;
-  position: relative;
-  width: 15px;
-  transition-delay: 0.2s;
 }

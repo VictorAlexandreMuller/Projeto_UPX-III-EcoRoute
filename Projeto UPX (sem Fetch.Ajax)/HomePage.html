@@ -6,10 +6,6 @@
     <title>Home Page | EcoRoute</title>
     <link rel="stylesheet" href="HeaderFooter.css" />
     <link rel="stylesheet" href="Geral/geral.css" />
-    <link rel="stylesheet" href="Login/login.css" />
-    <link rel="stylesheet" href="SaibaMais/saibaMais.css" />
-    <!-- <link rel="stylesheet" href="NovosDescartes/ndescartes.css" /> -->
-    <!-- <link rel="stylesheet" href="PósLogin/poslogin.css" /> -->
   </head>
   <body>
     <header>
@@ -52,8 +48,46 @@
         </div>
       </nav>
     </header>
-    <main><div class="conteudo"></div></main>
+    <main>
+      <div class="displayGeral">
+        <div class="conhec-verde">
+          <p>Conheça o ECORoute</p>
+        </div>
+        <div class="dest-text">
+          <p>Guiando seu Eletrônico ao Destino Verde</p>
+        </div>
+        <div class="saibaMais">
+          <button
+            class="custom-button"
+            href="SaibaMais/saibaMais.html"
+            onclick="log()"
+          >
+            Saiba mais
+          </button>
+        </div>
+        <div class="cards">
+          <div class="miniCard 1">
+            <p class="tip">
+              Os equipamentos eletrônicos possuem diversos componentes tóxicos
+              em suas estruturas.
+            </p>
+          </div>
+          <div class="miniCard 2">
+            <p class="tip">
+              Além disso, ao reciclar, podemos reutilizar materiais preciosos,
+              economizando recursos naturais e energia.
+            </p>
+          </div>
+          <div class="miniCard 3">
+            <p class="tip">
+              Quando jogamos no lixo de qualquer jeito, estamos prejudicando o
+              meio ambiente e até mesmo a nós mesmos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="rodape">© EcoRoute 2024</footer>
   </body>
-  <script src="HomePageAjax.js"></script>
+  <script src="Geral/geral.js"></script>
 </html>

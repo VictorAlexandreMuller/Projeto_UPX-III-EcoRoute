@@ -5,65 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Degradê Horizontal com Formulário</title>
     <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="../HeaderFooter.css" />
   </head>
   <body>
-    <div class="testeBodyPage">
-      <div>
-        <button href="Geral/geral.html" class="custom-btn">
-          <p>Voltar à página inicial</p>
-        </button>
-      </div>
-      <div class="main">
-        <input type="checkbox" id="chk" aria-hidden="true" />
-        <div class="login">
-          <form class="form">
-            <label for="chk" aria-hidden="true">Login</label>
-            <input
-              class="input"
-              type="email"
-              name="email"
-              placeholder="Insira seu e-mail"
-              required=""
-            />
-            <input
-              class="input"
-              type="password"
-              name="pswd"
-              placeholder="Insira sua senha"
-              required=""
-            />
-            <button id="entrar-btn">Entrar</button>
-          </form>
+    <header>
+      <nav class="navBar">
+        <div>
+          <button href="NovosDescartes/ndescartes.html">
+            <p>Login | Registre-se</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
         </div>
-        <div class="register">
-          <form class="form">
-            <label for="chk" aria-hidden="true">Cadastre-se</label>
-            <input
-              class="input"
-              type="text"
-              name="txt"
-              placeholder="Nome"
-              required=""
-            />
-            <input
-              class="input"
-              type="email"
-              name="email"
-              placeholder="E-mail"
-              required=""
-            />
-            <input
-              class="input"
-              type="password"
-              name="pswd"
-              placeholder="Senha"
-              required=""
-            />
-            <button>Registrar</button>
-          </form>
+        <div>
+          <button href="emDesenvolvimento">
+            <p>Sobre nós</p>
+          </button>
+        </div>
+        <div>
+          <button
+            class="buttonEcoRoute"
+            data-text="Awesome"
+            href="Geral/geral.html"
+          >
+            <span>&nbsp;ECORoute&nbsp;</span>
+            <span aria-hidden="true" class="hover-text"
+              >&nbsp;ECORoute&nbsp;</span
+            >
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="testeBodyPage">
+        <div>
+          <button href="Geral/geral.html" class="custom-btn">
+            <p>Voltar à página inicial</p>
+          </button>
+        </div>
+        <div class="main">
+          <input type="checkbox" id="chk" aria-hidden="true" />
+          <div class="login">
+            <form class="form">
+              <label for="chk" aria-hidden="true">Login</label>
+              <input
+                class="input"
+                type="email"
+                name="email"
+                placeholder="Insira seu e-mail"
+                required=""
+              />
+              <input
+                class="input"
+                type="password"
+                name="pswd"
+                placeholder="Insira sua senha"
+                required=""
+              />
+              <button id="entrar-btn">Entrar</button>
+            </form>
+          </div>
+          <div class="register">
+            <form class="form">
+              <label for="chk" aria-hidden="true">Cadastre-se</label>
+              <input
+                class="input"
+                type="text"
+                name="txt"
+                placeholder="Nome"
+                required=""
+              />
+              <input
+                class="input"
+                type="email"
+                name="email"
+                placeholder="E-mail"
+                required=""
+              />
+              <input
+                class="input"
+                type="password"
+                name="pswd"
+                placeholder="Senha"
+                required=""
+              />
+              <button>Registrar</button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+    <footer class="rodape">© EcoRoute 2024</footer>
   </body>
   <script src="principal.js"></script>
 </html>
