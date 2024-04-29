@@ -1,0 +1,39 @@
+html {
+  background: linear-gradient(to right, #024059, #026873, #04bf8a, #025940);
+}
+
+.divMae {
+  margin-top: 3%;
+  padding: 1% 3%;
+
+  display: grid;
+  grid-template-columns: 66% 33%;
+  align-items: center;
+  gap: 3vw;
+}
+
+.tituloQuemSomos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.apresentacao {
+  font-family: Calibri;
+  color: white;
+  font-size: 1.5rem;
+  text-align: left;
+  text-shadow: 20%;
+  padding: 2% 5%;
+  letter-spacing: 2px;
+  word-break: break-word;
+  text-shadow: 0.5px 0px 1rem rgba(0, 0, 0, 0.527);
+}
+
+.imagemLogo > img {
+  filter: drop-shadow(1px 1px 1rem rgba(0, 0, 0, 0.384));
+  width: 50vh;
+  height: 50vh;
+  border-radius: 50%;
+}
