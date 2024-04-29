@@ -7,159 +7,63 @@ html {
   background: linear-gradient(to right, #024059, #026873, #04bf8a, #025940);
 }
 
-/* -----------------------BODY DOMINIUM------------------------ */
-/* -------------------HEADER + MAIN + FOOTER-------------------- */
-
-/* .bodySaibaMais {
-  display: table;
-  width: 100%;
-  justify-content: space-between;
-  flex-direction: column;
-  position: relative;
-} */
-
-/* -----------------------HEADER DOMINIUM------------------------ */
-/* header {
-  width: 100%;
-  position: sticky;
-  top: 0;
-  background: transparent;
-  backdrop-filter: blur(5px);
-}
-
-.menu-superior {
-  border: 5px solid #2e2c57;
-
-  font-family: Arial;
-  font-weight: bold;
-
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: rgb(239, 239, 239);
-  color: rgb(27, 34, 105);
-  padding: 2% 10%;
-}
-
-.logo {
-  font-size: 1.5em;
-  text-align: left;
-}
-
-.sobre-nos {
-  color: rgb(27, 34, 105);
-  text-decoration: none;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.login-registro {
-  text-align: right;
-  font-size: 0.9em;
-}
-.custom-btn {
-  width: relative;
-  height: 40px;
-  color: #fff;
-  border-radius: 5px;
-  padding: 10px 25px;
-  font-family: "Arial";
-  font-weight: 500;
-  background: transparent;
-  cursor: pointer;
-  position: relative;
-  display: inline-block;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  outline: none;
-  font-size: 15px;
-}
-
-.btn-2 {
-  background-color: #004dff;
-  background: linear-gradient(0deg, #279bfa #279bfa);
-  border: none;
-}
-
-.navLeftSide {
-  padding: 0.5%;
-
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30vh;
-}
-
-.button-eco {
-  margin: 0;
-  margin-top: 0px;
-  height: auto;
-  background: transparent;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-}
-
-.button-eco {
-  --border-right: 6px;
-  --text-stroke-color: rgba(184, 186, 255, 0.6);
-  --animation-color: #518b69;
-  --fs-size: 2em;
-  letter-spacing: 3px;
-  text-decoration: none;
-  font-size: var(--fs-size);
-  font-family: "Arial";
-  position: relative;
-  text-transform: uppercase;
-  color: transparent;
-  -webkit-text-stroke: 1px var(--text-stroke-color);
-}
-
-.hover-text {
-  position: absolute;
-  box-sizing: border-box;
-  content: attr(data-text);
-  color: var(--animation-color);
-  width: 0%;
-  inset: 0;
-  border-right: var(--border-right) solid var(--animation-color);
-  overflow: hidden;
-  transition: 0.5s;
-  -webkit-text-stroke: 1px var(--animation-color);
-}
-
-.button-eco:hover .hover-text {
-  width: 100%;
-  filter: drop-shadow(0 0 23px var(--animation-color));
-}
-
-.navRightSide {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5vh;
-} */
-
-/* -----------------------MAIN DOMINIUM------------------------ */
-
-/* main {
-  background: linear-gradient(to right, #024059, #026873, #04bf8a, #025940);
-  margin-top: 1%;
-  margin-bottom: 5%;
-} */
-
 /* div do conteudo de apresentacao */
 .apresentacao {
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  font-size: 1.5rem;
-  text-align: center;
+  /* background: url(Imagens-SaibaMais/testee.jpeg); */
+  border-radius: 10px;
   padding: 1% 5%;
   margin-top: 2%;
+
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.cardApresentacao,
+.miniCards > p {
+  color: gray;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 4px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.cardApresentacao {
+  border: 2px solid gray;
+  border-radius: 15px;
+  padding: 5%;
+  background-color: rgb(239, 239, 239);
+  /* background: transparent; */
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 90%;
+  text-shadow: 0px 0px 1px rgb(42, 42, 42);
+  transition: all 1s;
+  cursor: default;
+}
+
+.cardApresentacao:hover {
+  transform: scale(1.05);
+}
+
+.miniCards {
+  border: 2px solid gray;
+  border-radius: 15px;
+  padding: 5%;
+  background-color: rgb(239, 239, 239);
+  /* background: transparent; */
+  backdrop-filter: blur(10px);
+  opacity: 90%;
+  text-shadow: 0px 0px 1px rgb(42, 42, 42);
+  transition: all 1s;
+  cursor: default;
+}
+
+.miniCards:hover {
+  transform: scale(1.05);
 }
 
 /* div com a grid de cards */
@@ -198,7 +102,7 @@ html {
   align-items: center;
   justify-content: center;
 
-  transition: all 1.9s;
+  transition: all 1s;
 }
 
 /* ação do cursor pelo card para 
@@ -243,6 +147,7 @@ aplicar o efeito e mostrar o back-card */
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: white;
+  letter-spacing: 3px;
 
   opacity: 1;
   transform: rotate(0deg);
@@ -254,30 +159,29 @@ aplicar o efeito e mostrar o back-card */
 
 /* div do conteudo que ficará abaixo dos cards */
 .conteudoDeBaixo {
+  /* border: 1px solid red; */
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1rem;
   text-align: center;
   padding: 1% 5%;
   margin-bottom: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
 }
 
-/* -----------------------FOOTER DOMINIUM------------------------ */
-
-/* .rodape {
-  background-color: black;
-  color: white;
-
-  font-size: 1.2rem;
-  font-family: Arial, Helvetica, sans-serif;
-
-  height: 5%;
-  width: 100%;
-
-  position: absolute;
-  bottom: 0%;
-
+.leftConteudoDeBaixo {
   display: flex;
-  justify-content: center;
-  align-items: center;
-} */
+  flex-direction: column;
+}
+
+.rightConteudoDeBaixo {
+  display: flex;
+  flex-direction: column;
+}
+
+.conteudoDeBaixo > div > div {
+  height: 8vh;
+}

@@ -4,31 +4,19 @@
 } */
 
 .testeBodyPage {
+  /* background: url(Imagens-Login/backgroundTree.jpg) no-repeat fixed center; */
+  background-size: 100% 100%;
+  border-radius: 20px;
   padding: 2%;
   margin: 1%;
+  width: auto;
+  opacity: 90%;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10vh;
-}
-
-.custom-btn {
-  border: none;
-  border-radius: 7px;
-  background-color: #004dff;
-  cursor: pointer;
-  outline: none;
-  padding: 10px 25px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-}
-
-.custom-btn > p {
-  color: #fff;
-  font-family: "Arial";
-  font-size: 15px;
 }
 
 .main {
@@ -42,6 +30,9 @@
   background-image: url("Imagens-Login/ecoBackground.png");
   background-size: cover;
   background-position: center;
+
+  /* background: transparent; */
+  /* backdrop-filter: blur(10px); */
 }
 
 .form {

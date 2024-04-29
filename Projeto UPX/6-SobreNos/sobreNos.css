@@ -3,15 +3,20 @@ html {
 }
 
 .divMae {
-  display: flex;
-  margin: 2.5%;
-  margin-top: 5%;
-  margin-right: 30%;
-  width: 90%;
+  margin-top: 3%;
+  padding: 1% 3%;
+
+  display: grid;
+  grid-template-columns: 66% 33%;
   align-items: center;
-  align-content: center;
+  gap: 3vw;
+}
+
+.tituloQuemSomos {
+  display: flex;
+  align-items: center;
   justify-content: center;
-  flex: 1;
+  flex-direction: column;
 }
 
 .apresentacao {
@@ -21,21 +26,14 @@ html {
   text-align: left;
   text-shadow: 20%;
   padding: 2% 5%;
-  word-spacing: 5%;
+  letter-spacing: 2px;
   word-break: break-word;
-  text-shadow: 0.5px 0px 1rem rgba(0, 0, 0, 0.527)
-}
-
-.imagemLogo img {
-  align-items: center;
-  height: 120%;
-  width: 120%;
-  padding: 20% 8%;
-  flex-direction: row;
-  border-radius: 60%;
-  filter: drop-shadow(1px 1px 1rem rgba(0, 0, 0, 0.384));
+  text-shadow: 0.5px 0px 1rem rgba(0, 0, 0, 0.527);
 }
 
 .imagemLogo > img {
+  filter: drop-shadow(1px 1px 1rem rgba(0, 0, 0, 0.384));
+  width: 50vh;
+  height: 50vh;
   border-radius: 50%;
 }

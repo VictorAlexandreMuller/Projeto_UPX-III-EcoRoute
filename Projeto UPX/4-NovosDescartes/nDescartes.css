@@ -1,6 +1,6 @@
 .divMain {
-  margin-top: 5vh;
   padding: 1% 2%;
+  margin-top: 3.5vh;
 
   display: flex;
   flex-direction: column;
@@ -8,7 +8,32 @@
   gap: 7vh;
 }
 
+.custom-btn {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: 1px solid white;
+  border-radius: 7px;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 25px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 1s;
+}
+
+.custom-btn:hover {
+  border: 1px solid rgb(203, 231, 204);
+  transform: scale(1.1);
+}
+
+.custom-btn > p {
+  color: #fff;
+  font-family: "Arial";
+  font-size: 15px;
+}
+
 .firstPlace {
+  /* border: 1px solid red; */
   width: 100%;
   padding: 0.5%;
 
@@ -32,8 +57,9 @@
   border-radius: 20px;
   display: flex;
   align-items: center;
-  padding: 1%;
+  padding: 1.5%;
   cursor: default;
+  letter-spacing: 1px;
 }
 
 .textinho > p {
@@ -48,10 +74,10 @@
 }
 
 .secondPlace {
+  /* border: 1px solid red; */
   width: 100%;
   height: auto;
   padding: 1%;
-  margin-bottom: 10vh;
 
   display: flex;
   align-items: center;
@@ -231,4 +257,9 @@
 .fancy:hover .text {
   color: white;
   padding-left: 1.5em;
+}
+
+.buttonPlace {
+  /* border: 1px solid red; */
+  margin-bottom: 10vh;
 }

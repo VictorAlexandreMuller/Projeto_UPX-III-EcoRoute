@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Produtos | EcoRoute</title>
+    <title>Serviços | EcoRoute</title>
     <link rel="icon" href="../0-HeaderFooter/icon/ecoIcon.png" />
     <link rel="stylesheet" href="posLogin.css" />
     <link rel="stylesheet" href="../0-HeaderFooter/headerFooter.css" />
@@ -34,7 +34,10 @@
           </button>
         </div>
         <div>
-          <button href="6-sobreNos/sobreNos.html" id="actionNavButtonSobreNos">
+          <button
+            href="../6-sobreNos/sobreNos.html"
+            id="actionNavButtonSobreNos"
+          >
             <p>Sobre nós</p>
           </button>
         </div>
@@ -55,77 +58,98 @@
     </header>
     <main>
       <div class="displayProdutosAceitos">
-        <div class="apresentacao">
-          <p>Produtos que o ECORoute aceita para descarte</p>
+        <div class="leftSidePosLogin">
+          <div class="apresentacao">
+            <p>Produtos que o ECORoute aceita para descarte</p>
+          </div>
+          <!-- Div com a Grid de Cards -->
+          <div class="placeGrid">
+            <!-- Primeiro Card -->
+            <div class="card">
+              <img
+                class="firstContentCard"
+                src="./Imagens-PosLogin/1-digitalClock.gif"
+                alt="digitalClock"
+                id="img1x1"
+              />
+              <div class="secondContentCard">
+                Relógios Analógicos e Digitais (ID2306)
+              </div>
+            </div>
+            <!-- Segundo Card -->
+            <div class="card">
+              <img
+                class="firstContentCard"
+                src="./Imagens-PosLogin/2-tv.gif"
+                alt="tv"
+                id="img1x1"
+              />
+              <div class="secondContentCard">Televisões (ID1256)</div>
+            </div>
+            <!-- Terceiro Card -->
+            <div class="card">
+              <img
+                class="firstContentCard"
+                src="./Imagens-PosLogin/3-carBattery.gif"
+                alt="carBattery"
+                id="img1x1"
+              />
+              <div class="secondContentCard">Baterias de Carro (ID8801)</div>
+            </div>
+            <!-- Quarto Card -->
+            <div class="card">
+              <img
+                class="firstContentCard"
+                src="./Imagens-PosLogin/4-battery.gif"
+                alt="Battery"
+                id="img1x1"
+              />
+              <div class="secondContentCard">Pilhas e Baterias (ID0042)</div>
+            </div>
+            <!-- Quinto Card -->
+            <div class="card">
+              <img
+                class="firstContentCard"
+                src="./Imagens-PosLogin/5-circuitBoard.gif"
+                alt="circuitBoard"
+                id="img1x1"
+              />
+              <div class="secondContentCard">Circuitos e Chips (ID9009)</div>
+            </div>
+            <!-- Sexto Card -->
+            <div class="card">
+              <img
+                class="firstContentCard"
+                src="./Imagens-PosLogin/6-devices.gif"
+                alt="devices"
+                id="img1x1"
+              />
+              <div class="secondContentCard">
+                Celulares, Tablets e Notebooks (ID1203)
+              </div>
+            </div>
+          </div>
         </div>
-        <!-- Div com a Grid de Cards -->
-        <div class="placeGrid">
-          <!-- Primeiro Card -->
-          <div class="card">
-            <img
-              class="firstContentCard"
-              src="./Imagens-PosLogin/despertador.png"
-              alt="Battery"
-              id="img1x1"
-            />
-            <div class="secondContentCard">
-              Relógios Analógicos e Digitais (ID2306)
+        <div class="rightSidePosLogin">
+          <div class="servicesTitle">
+            <p>Serviços</p>
+          </div>
+          <div class="servicesButtons">
+            <div class="box-3" id="actionButtonEcoCoins" href="emConstrucao">
+              <div class="btn btn-three">
+                <span id="actionButtonEcoCoins">EcoCoins</span>
+              </div>
             </div>
-          </div>
-          <!-- Segundo Card -->
-          <div class="card">
-            <img
-              class="firstContentCard"
-              src="./Imagens-PosLogin/tv.png"
-              alt="tv"
-              id="img1x1"
-            />
-            <div class="secondContentCard">
-              Televisões das antigas até as mais atuais (ID1256)
-            </div>
-          </div>
-          <!-- Terceiro Card -->
-          <div class="card">
-            <img
-              class="firstContentCard"
-              src="./Imagens-PosLogin/batcarro.png"
-              alt="batcarro"
-              id="img1x1"
-            />
-            <div class="secondContentCard">Baterias de Carro (ID8801)</div>
-          </div>
-          <!-- Quarto Card -->
-          <div class="card">
-            <img
-              class="firstContentCard"
-              src="./Imagens-PosLogin/pilha.png"
-              alt="pilha"
-              id="img1x1"
-            />
-            <div class="secondContentCard">Pilhas e Baterias (ID0042)</div>
-          </div>
-          <!-- Quinto Card -->
-          <div class="card">
-            <img
-              class="firstContentCard"
-              src="./Imagens-PosLogin/circuito.png"
-              alt="placa-de-circuito"
-              id="img1x1"
-            />
-            <div class="secondContentCard">
-              Circuitos e Chips em geral (ID9009)
-            </div>
-          </div>
-          <!-- Sexto Card -->
-          <div class="card">
-            <img
-              class="firstContentCard"
-              src="./Imagens-PosLogin/celular.png"
-              alt="celular"
-              id="img1x1"
-            />
-            <div class="secondContentCard">
-              Celulares, Tablets e Notebooks (ID1203)
+            <div
+              class="box-3"
+              id="actionButtonReciclar"
+              href="../4-NovosDescartes/nDescartes.html"
+            >
+              <div class="btn btn-three">
+                <button>
+                  <p>Recicle</p>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -134,4 +158,5 @@
     <footer class="rodape">© EcoRoute 2024</footer>
   </body>
   <script src="../0-HeaderFooter/headerFooter.js"></script>
+  <script src="posLogin.js"></script>
 </html>

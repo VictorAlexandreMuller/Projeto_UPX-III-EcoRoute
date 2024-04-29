@@ -1,9 +1,14 @@
 .displayProdutosAceitos {
-  padding: 0.5% 1%;
+  padding: 0.5% 1.5%;
+  /* border: 4px solid red; */
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 70% 30%;
   gap: 2vh;
+}
+
+.leftSidePosLogin {
+  /* border: 2px solid blue; */
 }
 
 .apresentacao {
@@ -30,25 +35,27 @@
 
 /* tamanho das imagens dentro dos cards */
 #img1x1 {
-  max-width: 22vh;
-  max-height: 22vh;
+  max-width: 16vh;
+  max-height: 16vh;
+  border-radius: 50%;
 }
 
 /* molde do card */
 .card {
-  background-color: #279bfa;
-  border: 10px solid #2c6170;
+  background: radial-gradient(circle, white, white, #6a9c81);
+  border: 10px solid #73adbd;
+  border: 10px solid #3e7667;
   border-radius: 30px;
 
   padding: 4vh;
-  height: 30vh;
-  width: 40vh;
+  height: 15vh;
+  width: 25vh;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  transition: all 1.9s;
+  transition: all 1s;
 }
 
 /* ação do cursor pelo card para 
@@ -57,9 +64,7 @@ aplicar o efeito e mostrar o back-card */
   com que o "HEIGHT" e "WIDTH" da classe 
   ".card" cresça em tantos % */
 .card:hover {
-  background: #279bfa;
-
-  cursor: pointer;
+  cursor: default;
   transform: scale(1.1);
 }
 
@@ -86,14 +91,128 @@ aplicar o efeito e mostrar o back-card */
 /* propriedades do back-card */
 .card:hover .secondContentCard {
   padding: 4vh;
-  height: 30vh;
-  width: 40vh;
+  height: 15vh;
+  width: 25vh;
 
   font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
-  color: white;
+  color: #3e7667;
+  font-weight: bold;
 
   opacity: 1;
   transform: rotate(0deg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+.rightSidePosLogin {
+  display: flex;
+  flex-direction: column;
+  border: 0px solid white;
+  border-radius: 30px;
+  padding: 2% 5%;
+  height: 50%;
+  gap: 10vh;
+}
+
+.servicesTitle {
+  text-align: center;
+  letter-spacing: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: white;
+  padding: 1% 5%;
+  text-shadow: 3px 3px 20px rgb(42, 42, 42);
+}
+
+.servicesButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 2% 5%;
+
+  border: 0px solid white;
+  border-radius: 30px;
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------PROPRIEDADES DOS BOTOES RIGHT SIDE (>>>)--------------- */
+/* ------------------------------------------------------------------- */
+
+.box-3 {
+  background-color: #66a182;
+}
+
+.btn {
+  height: 5vh;
+  width: 100%;
+  cursor: pointer;
+}
+
+.btn-three {
+  color: #fff;
+  transition: all 0.5s;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-three::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+.btn-three:hover::before {
+  opacity: 0;
+  transform: scale(0.5, 0.5);
+}
+.btn-three::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.2, 1.2);
+}
+.btn-three:hover::after {
+  opacity: 1;
+  transform: scale(1, 1);
+}
+
+.box-3 > div > span {
+  text-align: center;
+  letter-spacing: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 3px 3px 20px rgb(42, 42, 42);
+}
+
+.box-3 > div > button {
+  all: initial;
+  text-align: center;
+  letter-spacing: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 3px 3px 20px rgb(42, 42, 42);
+}
+
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
