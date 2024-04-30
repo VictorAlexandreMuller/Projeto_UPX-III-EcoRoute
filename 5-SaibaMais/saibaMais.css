@@ -24,9 +24,9 @@ html {
 .miniCards > p {
   color: gray;
   font-family: Arial, Helvetica, sans-serif;
-  letter-spacing: 4px;
+  letter-spacing: 3px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.1vw;
 }
 
 .cardApresentacao {
@@ -96,7 +96,7 @@ html {
 
   padding: 4vh;
   height: 30vh;
-  width: 40vh;
+  width: 50vh;
 
   display: flex;
   align-items: center;
@@ -119,6 +119,9 @@ aplicar o efeito e mostrar o back-card */
 
 /* propriedades do front-card */
 .firstContentCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.8s;
   opacity: 1;
 }
@@ -143,7 +146,7 @@ aplicar o efeito e mostrar o back-card */
   height: 30vh;
   width: 40vh;
 
-  font-size: 1rem;
+  font-size: 1vw;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: white;
@@ -162,7 +165,7 @@ aplicar o efeito e mostrar o back-card */
   /* border: 1px solid red; */
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-  font-size: 1rem;
+  font-size: 1.1vw;
   text-align: center;
   padding: 1% 5%;
   margin-bottom: 4%;

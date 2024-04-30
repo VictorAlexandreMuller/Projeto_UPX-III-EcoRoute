@@ -19,7 +19,7 @@ body {
 }
 
 .conhec-verde > p {
-  font-size: 30px;
+  font-size: 2.3vw;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-shadow: 3px 3px 20px rgb(42, 42, 42);
   color: #ffffff;
@@ -34,7 +34,7 @@ body {
 
 .dest-text > p {
   color: #ffffff;
-  font-size: 40px;
+  font-size: 3vw;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 
   text-shadow: 3px 3px 20px rgb(42, 42, 42);
@@ -81,7 +81,7 @@ body {
   color: rgba(255, 255, 255, 0.744);
   position: relative;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 1.5vw;
 }
 
 .custom-button a::before,
@@ -160,7 +160,7 @@ body {
 }
 
 .tip {
-  font-size: clamp(0.5em);
+  font-size: 1.2vw;
   font-weight: 700;
   text-shadow: 1px 1px 4px rgb(60, 60, 60);
   color: white;
