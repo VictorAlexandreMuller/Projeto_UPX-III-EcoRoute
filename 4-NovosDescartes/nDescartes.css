@@ -8,30 +8,6 @@
   gap: 7vh;
 }
 
-.custom-btn {
-  background: transparent;
-  backdrop-filter: blur(10px);
-  border: 1px solid white;
-  border-radius: 7px;
-  cursor: pointer;
-  outline: none;
-  padding: 10px 25px;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  transition: all 1s;
-}
-
-.custom-btn:hover {
-  border: 1px solid rgb(203, 231, 204);
-  transform: scale(1.1);
-}
-
-.custom-btn > p {
-  color: #fff;
-  font-family: "Arial";
-  font-size: 15px;
-}
-
 .firstPlace {
   /* border: 1px solid red; */
   width: 100%;
@@ -64,7 +40,7 @@
 
 .textinho > p {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 1.3em;
+  font-size: 1.5vw;
   text-align: center;
   margin: 2%;
 }
@@ -86,6 +62,9 @@
   gap: 8vw;
 }
 
+.divImg {
+}
+
 .imagemRecicle {
   max-width: 50vh;
   max-height: 50vh;
@@ -103,11 +82,13 @@
   border-radius: 10px;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 2%;
+  width: 30vw;
 }
 
 .flex {
-  width: 100%;
+  /* width: 100%; */
 
   display: flex;
   flex-direction: column;
@@ -135,26 +116,26 @@
   border-radius: 5px;
 }
 
+/* palavras: Seu Usuário, CPF, Cidade/CEP, Produto para Descarte */
 .normalTextArea + span {
   position: absolute;
   left: 10px;
   top: 15px;
   color: #355891;
-  font-size: 0.9em;
   cursor: text;
   transition: 0.3s ease;
 }
 
 .normalTextArea:placeholder-shown + span {
   top: 15px;
-  font-size: 0.9em;
+  font-size: 1.1vw;
 }
 
 .normalTextArea:focus + span,
 .normalTextArea:valid + span,
 .normalTextArea:hover + span {
   top: 30px;
-  font-size: 0.7em;
+  font-size: 0.8vw;
   font-weight: 600;
 }
 
@@ -162,26 +143,26 @@
   color: green;
 }
 
+/* palavra: Informações */
 .textInputArea + span {
   position: absolute;
   left: 10px;
   top: 50px;
   color: #355891;
-  font-size: 0.9em;
   cursor: text;
   transition: 0.3s ease;
 }
 
 .textInputArea:placeholder-shown + span {
   top: 40px;
-  font-size: 0.9em;
+  font-size: 1.1vw;
 }
 
 .textInputArea:focus + span,
 .textInputArea:valid + span,
 .textInputArea:hover + span {
   top: 50px;
-  font-size: 0.7em;
+  font-size: 0.8vw;
   font-weight: 600;
 }
 
@@ -189,6 +170,11 @@
   color: green;
 }
 
+/* ------------------------------------------------------------------- */
+/* ---------------------BOTAO ENVIAR AGENDAMENTO---------------------- */
+/* ------------------------------------------------------------------- */
+
+/* estilizacao do botao  */
 .fancy {
   background-color: white;
   border: 2px solid #355891;
@@ -196,52 +182,48 @@
   box-sizing: border-box;
   color: #355891;
   cursor: pointer;
-
-  width: 45vh;
-
-  font-weight: bold;
-  letter-spacing: 2px;
+  width: 60vh;
   outline: none;
   overflow: visible;
   padding: 8px 0px;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  text-transform: none;
   transition: all 0.3s ease-in-out;
   user-select: none;
-  font-size: 13px;
 
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.fancy::before {
-  content: " ";
-  width: 1.7rem;
+.positionTracinho {
+}
+
+.positionTextoEnviar {
+  display: flex;
+}
+
+/* estilizacao do TRACINHO do botao */
+.tracinho {
+  content: "";
+  margin: 2px;
+  width: 1.4vw;
   height: 2px;
   background: #355891;
-  top: 50%;
-  left: 1.5em;
-  position: absolute;
-  transform: translateY(-50%);
-  transform: translateX(230%);
-  transform-origin: center;
+  display: flex;
   transition: background 0.3s linear, width 0.3s linear;
+  font-size: 1vw;
 }
 
-.fancy .text {
-  font-size: 1.125em;
+/* estilizacao do TEXTO do botao */
+.text {
+  letter-spacing: 2px;
   line-height: 1.33333em;
-  padding-left: 2em;
-  display: block;
-  text-align: left;
-  font-size: 10px;
+  padding-left: 1em;
+  font-size: 0.7vw;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   transition: all 0.3s ease-in-out;
-  text-transform: lowercase;
-  text-decoration: none;
+  text-transform: uppercase;
   color: #355891;
-  transform: translateX(30%);
+  font-weight: bold;
 }
 
 .fancy:hover {
@@ -249,17 +231,48 @@
   background: #5f82a9;
 }
 
-.fancy:hover::before {
+.tracinho:hover {
   width: 1.5rem;
   background: #355891;
 }
 
 .fancy:hover .text {
   color: white;
-  padding-left: 1.5em;
+  padding-left: 2em;
 }
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------- */
+/* ---------------------------BOTAO VOLTAR---------------------------- */
+/* ------------------------------------------------------------------- */
 
 .buttonPlace {
-  /* border: 1px solid red; */
   margin-bottom: 10vh;
 }
+
+.custom-btn {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: 1px solid white;
+  border-radius: 7px;
+  cursor: pointer;
+  outline: none;
+  padding: 10px 25px;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: all 1s;
+}
+
+.custom-btn:hover {
+  border: 1px solid rgb(203, 231, 204);
+  transform: scale(1.1);
+}
+
+.custom-btn > p {
+  color: #fff;
+  font-family: "Arial";
+  font-size: 15px;
+}
+/* ------------------------------------------------------------------- */
+/* ------------------------------------------------------------------- */

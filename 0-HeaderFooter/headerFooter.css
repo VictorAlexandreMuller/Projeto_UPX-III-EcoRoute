@@ -51,12 +51,12 @@ nav > div > button {
   cursor: pointer;
   --primary-color: #111;
   --hovered-color: #6d9371;
-  position: relative;
+  position: relative; /* faz o traco verde aparecer em baixo do login/register */
   display: flex;
-  font-weight: 600;
-  font-size: 20px;
-  gap: 0.5rem;
   align-items: center;
+  font-weight: 600;
+  font-size: 1.5vw;
+  gap: 0.5vw;
 }
 
 /* Efeito verde do botão Login/Register */
@@ -65,9 +65,9 @@ nav > div > button::after {
   content: "";
   width: 0;
   left: 0;
-  bottom: -7px;
+  bottom: -0.7vw;
   background: var(--hovered-color);
-  height: 2px;
+  height: 0.2vw;
   transition: 0.3s ease-out;
 }
 
@@ -78,13 +78,13 @@ nav > div > button:hover::after {
 
 /* Seta do botão LOGIN/REGISTRE-SE */
 nav > div > button svg {
-  width: 15px;
+  width: 1.1vw;
   transition: all 0.2s ease 0.2s;
 }
 
 /* Hover da seta do botão LOGIN/REGISTRE-SE */
 nav > div > button:hover svg {
-  transform: translateX(4px);
+  transform: translateX(0.4vw);
   color: var(--hovered-color);
 }
 
@@ -98,18 +98,18 @@ nav > div > button:hover svg {
   border: none;
   cursor: pointer;
 
-  --border-right: 6px;
+  --border-right: 0.5vw;
   --text-stroke-color: rgba(184, 186, 255, 0.6);
   --animation-color: #518b69;
-  --fs-size: 2em;
+  --fs-size: 2vw;
   letter-spacing: 3px;
   text-decoration: none;
-  font-size: var(--fs-size);
+  font-size: 2.3vw;
   font-family: "Arial";
   position: relative;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1px var(--text-stroke-color);
+  -webkit-text-stroke: 0.1vw var(--text-stroke-color);
 }
 
 /* Une os dois Span ECOROUTE da NavBar para criar o efeito */
@@ -143,7 +143,7 @@ footer {
   color: black;
 
   font-weight: 600;
-  font-size: 1em;
+  font-size: 1.1vw;
   font-family: "Arial";
 
   display: flex;

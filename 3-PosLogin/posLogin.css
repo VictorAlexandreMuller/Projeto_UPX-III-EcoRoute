@@ -94,7 +94,7 @@ aplicar o efeito e mostrar o back-card */
   height: 15vh;
   width: 25vh;
 
-  font-size: 1rem;
+  font-size: 1.2vw;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
   color: #3e7667;
@@ -198,7 +198,7 @@ aplicar o efeito e mostrar o back-card */
   text-align: center;
   letter-spacing: 5px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1.3vw;
   color: white;
   text-shadow: 3px 3px 20px rgb(42, 42, 42);
 }
@@ -208,7 +208,7 @@ aplicar o efeito e mostrar o back-card */
   text-align: center;
   letter-spacing: 5px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1rem;
+  font-size: 1.3vw;
   color: white;
   text-shadow: 3px 3px 20px rgb(42, 42, 42);
 }
