@@ -557,3 +557,15 @@ async function fetchDistance(destination, index) {
     }
   });
 }
+
+// ----------------------------------------------------------------------------------------
+// Adiciona um ouvinte de evento para o botão "Voltar ao painel EcoRoute"
+document
+  .getElementById("actionButtonVoltarPainel")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    let hrefValue = this.getAttribute("href");
+    window.location.href = hrefValue;
+  });
+
+// ----------------------------------------------------------------------------------------
