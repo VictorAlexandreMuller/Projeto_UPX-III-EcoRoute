@@ -86,12 +86,14 @@
           </div>
           <div class="register">
             <form
+              onsubmit="return false"
               action="https://6638ec524253a866a24fb195.mockapi.io/UPX-Users"
               method="post"
               class="form"
             >
               <label for="chk" aria-hidden="true">Cadastre-se</label>
               <input
+                id="nomeRegistrar"
                 class="input"
                 type="text"
                 name="nome"
@@ -99,6 +101,7 @@
                 required=""
               />
               <input
+                id="emailRegistrar"
                 class="input"
                 type="email"
                 name="email"
@@ -106,13 +109,19 @@
                 required=""
               />
               <input
+                id="senhaRegistrar"
                 class="input"
                 type="password"
                 name="senha"
                 placeholder="Senha"
                 required=""
               />
-              <button type="submit">Registrar</button>
+              <button
+                type="submit"
+                onclick="salvarUser('../2-Login/login.html')"
+              >
+                Registrar
+              </button>
             </form>
           </div>
         </div>

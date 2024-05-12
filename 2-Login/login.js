@@ -27,3 +27,44 @@ function validacao(link) {
       alert("Usuário não encontrado.");
     });
 }
+
+// -------------------------------------------------------------------------------------------------
+
+async function salvarUser(link) {
+  if (
+    document.getElementById("nomeRegistrar").value == "" ||
+    document.getElementById("emailRegistrar").value == "" ||
+    document.getElementById("senhaRegistrar").value == ""
+  ) {
+    alert("Por favor, preencha todos os campos para realizar o seu cadastro.");
+  } else {
+    let user = {
+      seuUsuario: document.getElementById("seuUsuario").value,
+      cpf: document.getElementById("cpf").value,
+      cep: document.getElementById("cep").value,
+      produto: document.getElementById("produto").value,
+      informacoesAdicionais: document.getElementById("informacoesAdicionais")
+        .value,
+    };
+
+    await fetchLixo(user);
+
+    window.location.href = link;
+  }
+}
+
+async function fetchLixo(user) {
+  let url = "https://6638ec524253a866a24fb195.mockapi.io/UPX-Coletas";
+
+  await fetch(url, {
+    method: "Post",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(user),
+  }).then((resposta) => {
+    if (resposta.status == 201) {
+      window.alert("Salvo com sucesso.");
+    }
+  });
+}
