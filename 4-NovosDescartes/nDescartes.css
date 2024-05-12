@@ -128,15 +128,15 @@
 
 .normalTextArea:placeholder-shown + span {
   top: 15px;
-  font-size: 1.1vw;
+  font-size: 14px;
 }
 
 .normalTextArea:focus + span,
 .normalTextArea:valid + span,
 .normalTextArea:hover + span {
   top: 30px;
-  font-size: 0.8vw;
-  font-weight: 600;
+  font-size: 14px;
+  /* font-weight: 600; */
 }
 
 .normalTextArea:valid + span {
@@ -155,15 +155,15 @@
 
 .textInputArea:placeholder-shown + span {
   top: 40px;
-  font-size: 1.1vw;
+  font-size: 14px;
 }
 
 .textInputArea:focus + span,
 .textInputArea:valid + span,
 .textInputArea:hover + span {
   top: 50px;
-  font-size: 0.8vw;
-  font-weight: 600;
+  font-size: 14px;
+  /* font-weight: 600; */
 }
 
 .textInputArea:valid + span {
@@ -182,7 +182,7 @@
   box-sizing: border-box;
   color: #355891;
   cursor: pointer;
-  width: 60vh;
+  width: 25vw;
   outline: none;
   overflow: visible;
   padding: 8px 0px;

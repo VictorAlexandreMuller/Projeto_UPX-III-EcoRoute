@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../../0-HeaderFooter/icon/ecoIcon.png" />
+    <link rel="stylesheet" href="../../0-HeaderFooter/headerFooter.css" />
+    <link rel="stylesheet" href="googleMaps.css" />
+    <title>Route Maps | EcoRoute</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navBar">
+        <div>
+          <button
+            href="../../2-Login/login.html"
+            id="actionNavButtonLoginRegister"
+          >
+            <p>Login | Registre-se</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <button
+            href="../../6-SobreNos/sobreNos.html"
+            id="actionNavButtonSobreNos"
+          >
+            <p>Sobre nós</p>
+          </button>
+        </div>
+        <div>
+          <button
+            href="../../index.html"
+            id="actionNavButtonEcoRoute"
+            class="buttonEcoRoute"
+            data-text="Awesome"
+          >
+            <span>&nbsp;ECORoute&nbsp;</span>
+            <span aria-hidden="true" class="hover-text"
+              >&nbsp;ECORoute&nbsp;</span
+            >
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="divMainMap">
+        <!-- <section class="zeroSection">
+          <p>
+            <label for="">Origem</label>
+            <input type="text" name="destino" id="origem" />
+          </p>
+          <p>
+            <label for="">Destino</label>
+            <input type="text" name="destino" id="destino" />
+          </p>
+        </section> -->
+        <section class="firstSection">
+          <div id="map"></div>
+          <button
+            class="custom-btn"
+            id="actionButtonVoltarPainel"
+            href="../../3-PosLogin/posLogin.html"
+          >
+            <p>Voltar ao painel EcoRoute</p>
+          </button>
+        </section>
+        <section class="secondSection">
+          <form>
+            <fieldset class="cepFieldset">
+              <!-- <legend>&nbsp;&nbsp;Consulta de CEP&nbsp;&nbsp;</legend> -->
+              <p>
+                <label for="">CEP</label>
+                <input
+                  class="inputFieldCEP"
+                  type="text"
+                  name="cep"
+                  id="cep"
+                  placeholder="Digite o CEP"
+                />
+              </p>
+              <button
+                class="button-33"
+                role="button"
+                onclick="consultar(event)"
+              >
+                Consultar
+              </button>
+            </fieldset>
+          </form>
+
+          <br />
+
+          <form>
+            <fieldset class="infosFieldset">
+              <!-- <legend>&nbsp;&nbsp;Dados da rua&nbsp;&nbsp;</legend> -->
+              <p>
+                <label for="">Rua</label>
+                <input class="inputField" type="text" name="rua" id="rua" />
+              </p>
+              <p>
+                <label for="">Bairro</label>
+                <input
+                  class="inputField"
+                  type="text"
+                  name="bairro"
+                  id="bairro"
+                />
+              </p>
+              <p>
+                <label for="">Estado</label>
+                <input
+                  class="inputField"
+                  type="text"
+                  name="estado"
+                  id="estado"
+                />
+              </p>
+
+              <p>
+                <label for="">Origem</label>
+                <input
+                  class="inputField"
+                  type="text"
+                  name="origem"
+                  id="idOrigem"
+                />
+              </p>
+              <div class="divResultButton">
+                <button
+                  class="button-33"
+                  role="button"
+                  type="button"
+                  onclick="calcular()"
+                >
+                  Calcular
+                </button>
+              </div>
+            </fieldset>
+          </form>
+        </section>
+        <section class="thirdSection">
+          <fieldset class="resultFieldset">
+            <legend>&nbsp;&nbsp;Resultados da Pesquisa&nbsp;&nbsp;</legend>
+            <div id="resultados">
+              <p class="pResultados">
+                <span>Mais próximo de...</span>
+
+                <span id="distancia">-</span>
+
+                <span id="distancia1">-</span>
+
+                <span id="distancia2">-</span>
+
+                <span id="distancia3">-</span>
+
+                <span>... é mais distante.</span>
+              </p>
+            </div>
+          </fieldset>
+        </section>
+      </div>
+    </main>
+    <footer class="rodape">© EcoRoute 2024</footer>
+  </body>
+  <script src="../../0-HeaderFooter/headerFooter.js"></script>
+  <script src="cep.js"></script>
+  <script src="googleMaps.js"></script>
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZfKrBUVDGNyhpVY9HKDUK3EkObju85hM&callback=initMap&language=pt&region=br"
+    async
+    defer
+  ></script>
+</html>
