@@ -12,7 +12,7 @@ function consultar(event) {
     document.querySelector("#estado").value = dados.state;
 
     document.querySelector("#idOrigem").value = dados.lat + ", " + dados.lng;
-    document.querySelector("#idDestino").value = dados.state;
+    // document.querySelector("#idDestino").value = dados.state;
   });
 }
 function consultarCep(cep) {

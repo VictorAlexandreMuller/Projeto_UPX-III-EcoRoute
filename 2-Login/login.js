@@ -1,21 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
-  var entrarBtn = document.getElementById("entrar-btn");
+function validacao(link) {
+  const url = new URL("https://6638ec524253a866a24fb195.mockapi.io/UPX-Users");
 
-  entrarBtn.addEventListener("click", function () {
-    window.location.href = "../PósLogin/poslogin.html";
-  });
-});
+  url.searchParams.append("email", document.getElementById("emailLogin").value);
 
-// Adiciona um ouvinte de evento para o botão "Entrar"
-document
-  .getElementById("actionButtonEntrar")
-  .addEventListener("click", function (event) {
-    event.preventDefault();
-    // Verifica se todos os campos obrigatórios do formulário estão preenchidos antes de continuar
-    if (document.getElementById("loginForm").checkValidity()) {
-      var hrefValue = this.getAttribute("href");
-      window.location.href = hrefValue;
-    } else {
-      alert("Por favor, preencha todos os campos obrigatórios.");
-    }
-  });
+  fetch(url, {
+    method: "GET",
+    headers: { "content-type": "application/json" },
+  })
+    .then((res) => {
+      if (res.ok) {
+        return res.json();
+      }
+      // handle error
+      alert("Fora do ar.");
+    })
+    .then((users) => {
+      // mockapi returns only tasks that match `hello` string
+      if (users[0].senha == document.getElementById("senhaLogin").value) {
+        window.location.href = link;
+      } else {
+        alert("Senha inválida.");
+      }
+    })
+    .catch((error) => {
+      // handle error
+      alert("Usuário não encontrado.");
+    });
+}

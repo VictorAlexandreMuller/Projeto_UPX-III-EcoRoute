@@ -58,8 +58,25 @@
     </header>
     <main>
       <div class="divMainMap">
+        <!-- <section class="zeroSection">
+          <p>
+            <label for="">Origem</label>
+            <input type="text" name="destino" id="origem" />
+          </p>
+          <p>
+            <label for="">Destino</label>
+            <input type="text" name="destino" id="destino" />
+          </p>
+        </section> -->
         <section class="firstSection">
           <div id="map"></div>
+          <button
+            class="custom-btn"
+            id="actionButtonVoltaPagina"
+            href="../3-PosLogin/posLogin.html"
+          >
+            <p>Voltar ao painel EcoRoute</p>
+          </button>
         </section>
         <section class="secondSection">
           <form>
@@ -84,6 +101,9 @@
               </button>
             </fieldset>
           </form>
+
+          <br />
+
           <form>
             <fieldset class="infosFieldset">
               <!-- <legend>&nbsp;&nbsp;Dados da rua&nbsp;&nbsp;</legend> -->
@@ -119,39 +139,36 @@
                   id="idOrigem"
                 />
               </p>
-
-              <!-- <p>
-                <label for="destino">Destino</label>
-                <input type="text" name="destino" id="idDestino" />
-              </p> -->
+              <div class="divResultButton">
+                <button
+                  class="button-33"
+                  role="button"
+                  type="button"
+                  onclick="calcular()"
+                >
+                  Calcular
+                </button>
+              </div>
             </fieldset>
-            <div class="divResultButton">
-              <button
-                class="button-33"
-                role="button"
-                type="button"
-                onclick="calcular()"
-              >
-                Calcular
-              </button>
-            </div>
           </form>
         </section>
         <section class="thirdSection">
           <fieldset class="resultFieldset">
             <legend>&nbsp;&nbsp;Resultados da Pesquisa&nbsp;&nbsp;</legend>
             <div id="resultados">
-              <!-- <p>Distância percorrida</p> -->
-              <p>
-                <span id="distancia"></span>
-                <span id="distancia2"></span>
-                <span id="distancia3"></span>
-                <span id="distancia4"></span>
+              <p class="pResultados">
+                <span>Mais próximo de...</span>
+
+                <span id="distancia">-</span>
+
+                <span id="distancia1">-</span>
+
+                <span id="distancia2">-</span>
+
+                <span id="distancia3">-</span>
+
+                <span>... é mais distante.</span>
               </p>
-              <!-- <p>
-                km (TIRAR DAQUI E COLOCAR COM JS EM CADA UM DOS DISTANCIA 1 2 3
-                4)
-              </p> -->
             </div>
           </fieldset>
         </section>
@@ -162,8 +179,6 @@
   <script src="../../0-HeaderFooter/headerFooter.js"></script>
   <script src="cep.js"></script>
   <script src="googleMaps.js"></script>
-  <!-- <script src="Distance/dist.js"></script> -->
-  <!-- <script src="Distance/dist2.js"></script> -->
   <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZfKrBUVDGNyhpVY9HKDUK3EkObju85hM&callback=initMap&language=pt&region=br"
     async

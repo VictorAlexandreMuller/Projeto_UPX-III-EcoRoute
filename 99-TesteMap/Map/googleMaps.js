@@ -20,10 +20,10 @@ const centerMap = { lat: -23.4698412, lng: -47.4299885 };
 var origemMarker = null;
 var destinoMarker = null;
 
-var pontoColetaNorte = { lat: -23.4362109, lng: -47.4785626 };
-var pontoColetaLeste = { lat: -23.4821506, lng: -47.4140626 };
-var pontoColetaSul = { lat: -23.5597765, lng: -47.4566038 };
-var pontoColetaOeste = { lat: -23.4978866, lng: -47.5186267 };
+var pontoColetaNorte = { lat: -23.4362109, lng: -47.4785626 }; // 0
+var pontoColetaLeste = { lat: -23.4821506, lng: -47.4140626 }; // 1
+var pontoColetaSul = { lat: -23.5597765, lng: -47.4566038 }; // 2
+var pontoColetaOeste = { lat: -23.4978866, lng: -47.5186267 }; // 3
 
 var results = [];
 
@@ -489,43 +489,71 @@ function initMap() {
 
 // ---------------------------------------------------------------------------
 
-function calcular() {
+async function calcular() {
   let arrayPontos = [
     pontoColetaNorte, // 0
     pontoColetaLeste, // 1
     pontoColetaSul, // 2
     pontoColetaOeste, // 3
   ];
+
   var origem = document.getElementById("idOrigem").value;
 
   if (origem == "") {
     alert("Por favor, preencha todos os campos.");
   } else {
-    var directionsService = new google.maps.DirectionsService();
+    await fetchDistance(arrayPontos[0], "Norte");
+    await fetchDistance(arrayPontos[1], "Leste");
+    await fetchDistance(arrayPontos[2], "Sul");
+    await fetchDistance(arrayPontos[3], "Oeste");
 
-    arrayPontos.forEach(fetchDistance);
-
-    function fetchDistance(destination, index) {
-      var request = {
-        origin: origem,
-        destination: destination,
-        travelMode: "DRIVING",
-      };
-
-      directionsService.route(request, function (result, status) {
-        if (status == "OK") {
-          // directionsRenderer.setDirections(result);
-          console.log(result);
-
-          var distancia = result.routes[0].legs[0].distance.value / 1000;
-          results.push({ distance: distancia, point: index });
-        }
-      });
-    }
-
-    results.sort();
     console.log(results);
 
-    document.getElementById("distancia").textContent = results[0].distance;
+    results.sort((a, b) => a.distance - b.distance);
+
+    document.getElementById("distancia").innerHTML =
+      "Distancia do Ponto de Coleta " +
+      results[0].point +
+      ": " +
+      results[0].distance +
+      "km.";
+    document.getElementById("distancia1").innerHTML =
+      "Distancia do Ponto de Coleta " +
+      results[1].point +
+      ": " +
+      results[1].distance +
+      "km.";
+    document.getElementById("distancia2").innerHTML =
+      "Distancia do Ponto de Coleta " +
+      results[2].point +
+      ": " +
+      results[2].distance +
+      "km.";
+    document.getElementById("distancia3").innerHTML =
+      "Distancia do Ponto de Coleta " +
+      results[3].point +
+      ": " +
+      results[3].distance +
+      "km.";
+    results = [];
   }
+}
+
+async function fetchDistance(destination, index) {
+  var origem = document.getElementById("idOrigem").value;
+  var directionsService = new google.maps.DirectionsService();
+  var request = {
+    origin: origem,
+    destination: destination,
+    travelMode: "DRIVING",
+  };
+
+  await directionsService.route(request, function (result, status) {
+    if (status == "OK") {
+      // directionsRenderer.setDirections(result);
+
+      var distancia = result.routes[0].legs[0].distance.value / 1000;
+      results.push({ distance: distancia, point: index });
+    }
+  });
 }
