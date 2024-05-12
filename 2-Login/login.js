@@ -39,22 +39,19 @@ async function salvarUser(link) {
     alert("Por favor, preencha todos os campos para realizar o seu cadastro.");
   } else {
     let user = {
-      seuUsuario: document.getElementById("seuUsuario").value,
-      cpf: document.getElementById("cpf").value,
-      cep: document.getElementById("cep").value,
-      produto: document.getElementById("produto").value,
-      informacoesAdicionais: document.getElementById("informacoesAdicionais")
-        .value,
+      nome: document.getElementById("nomeRegistrar").value,
+      email: document.getElementById("emailRegistrar").value,
+      senha: document.getElementById("senhaRegistrar").value,
     };
 
-    await fetchLixo(user);
+    await fetchUsers(user);
 
     window.location.href = link;
   }
 }
 
-async function fetchLixo(user) {
-  let url = "https://6638ec524253a866a24fb195.mockapi.io/UPX-Coletas";
+async function fetchUsers(user) {
+  let url = "https://6638ec524253a866a24fb195.mockapi.io/UPX-Users";
 
   await fetch(url, {
     method: "Post",
