@@ -20,8 +20,8 @@ function listaMinhasEcoCoins() {
         //   }).then(() => listaAnimais());
         // };
 
-        // Refere-se ao Editar
-        li.innerHTML = ` (${Descartes.codigo}) ${Descartes.descarte} - EcoCoins: ${Descartes.ecoCoins}`;
+        // Refere-se ao Editar (( - EcoCoins: ${Descartes.cep}))
+        li.innerHTML = ` (${Descartes.seuUsuario}) ${Descartes.produto}`;
         li.href = `../0-Suports/itensParaDescartes.json?id=${Descartes.id}`;
         li.classList.add("linkAnimal");
 
