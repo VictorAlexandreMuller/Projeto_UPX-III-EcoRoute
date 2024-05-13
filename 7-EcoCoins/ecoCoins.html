@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoCoins | EcoRoute</title>
+    <link rel="icon" href="../0-HeaderFooter/icon/ecoIcon.png" />
+    <link rel="stylesheet" href="ecoCoins.css" />
+    <link rel="stylesheet" href="../0-HeaderFooter/headerFooter.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navBar">
+        <div>
+          <button
+            href="../2-Login/login.html"
+            id="actionNavButtonLoginRegister"
+          >
+            <p>Login | Registre-se</p>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M14 5l7 7m0 0l-7 7m7-7H3"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div>
+          <button
+            href="../6-SobreNos/sobreNos.html"
+            id="actionNavButtonSobreNos"
+          >
+            <p>Sobre nós</p>
+          </button>
+        </div>
+        <div>
+          <button
+            href="../index.html"
+            id="actionNavButtonEcoRoute"
+            class="buttonEcoRoute"
+            data-text="Awesome"
+          >
+            <span>&nbsp;ECORoute&nbsp;</span>
+            <span aria-hidden="true" class="hover-text"
+              >&nbsp;ECORoute&nbsp;</span
+            >
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="mainDiv">
+        <section class="firstSection">
+          <fieldset class="ecoFieldset">
+            <legend class="legendEcoFieldset">
+              <div class="ecoCoinIcon">
+                <img
+                  id="ecoCoinIconID"
+                  src="Imagens-EcoCoins/ecoCoinIcon.png"
+                  alt="ecoCoinIcon"
+                />
+              </div>
+              <div><p>Valores das EcoCoins</p></div>
+            </legend>
+            <ul id="listaValoresEcoCoins">
+              <li>Teste</li>
+            </ul>
+          </fieldset>
+          <fieldset class="ecoFieldset">
+            <legend class="legendEcoFieldset">
+              <div><p>Minhas EcoCoins</p></div>
+              <div class="ecoCoinIcon">
+                <img
+                  id="ecoCoinIconID"
+                  src="Imagens-EcoCoins/ecoCoinIcon.png"
+                  alt="ecoCoinIcon"
+                />
+              </div>
+            </legend>
+            <div>
+              <ul id="listaMinhasEcoCoins">
+                <li>Teste</li>
+              </ul>
+            </div>
+          </fieldset>
+        </section>
+        <section>
+          <div class="buttonPlace">
+            <button
+              class="custom-btn"
+              id="actionButtonVoltaPagina"
+              href="../3-PosLogin/posLogin.html"
+            >
+              <p>Voltar ao painel EcoRoute</p>
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="rodape">© EcoRoute 2024</footer>
+  </body>
+  <script src="../0-Suports/utils.js"></script>
+  <script src="ecoCoins.js"></script>
+  <script src="valoresEcoCoins.js"></script>
+  <script src="minhasEcoCoins.js"></script>
+  <script src="../0-HeaderFooter/headerFooter.js"></script>
+</html>

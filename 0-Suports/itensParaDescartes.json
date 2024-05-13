@@ -1,0 +1,40 @@
+{
+  "Descartes": [
+    {
+      "id": 1,
+      "descarte": "Relógios Analógicos e Digitais",
+      "codigo": "ID2306",
+      "ecoCoins": "2"
+    },
+    {
+      "id": 2,
+      "descarte": "Televisões",
+      "codigo": "ID1256",
+      "ecoCoins": "333"
+    },
+    {
+      "id": 3,
+      "descarte": "Baterias de Carro",
+      "codigo": "ID8801",
+      "ecoCoins": "55"
+    },
+    {
+      "id": 4,
+      "descarte": "Pilhas e Baterias",
+      "codigo": "ID0042",
+      "ecoCoins": "9"
+    },
+    {
+      "id": 5,
+      "descarte": "Circuitos e Chips",
+      "codigo": "ID9009",
+      "ecoCoins": "11"
+    },
+    {
+      "id": 6,
+      "descarte": "Celulares, Tablets e Notebooks",
+      "codigo": "ID1203",
+      "ecoCoins": "22"
+    }
+  ]
+}
