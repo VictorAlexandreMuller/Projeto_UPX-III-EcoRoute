@@ -143,6 +143,28 @@
   color: green;
 }
 
+.comboTextArea {
+  font-size: 14px;
+  width: 32.6vh;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #355891;
+  color: #355891;
+  border-radius: 5px;
+}
+
+.comboTextAreaJS {
+  color: #355891;
+}
+
+.comboTextAreaOptionsJS {
+  color: green;
+}
+
+.comboTextArea:valid {
+  color: green;
+}
+
 /* palavra: Informações */
 .textInputArea + span {
   position: absolute;

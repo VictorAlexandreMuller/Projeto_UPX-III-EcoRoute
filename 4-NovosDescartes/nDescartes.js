@@ -14,7 +14,7 @@ async function salvarLixo(link) {
     document.getElementById("seuUsuario").value == "" ||
     document.getElementById("cpf").value == "" ||
     document.getElementById("cep").value == "" ||
-    document.getElementById("produto").value == "" ||
+    document.getElementById("boxProduto").value == "" ||
     document.getElementById("informacoesAdicionais").value == ""
   ) {
     alert(
@@ -25,7 +25,7 @@ async function salvarLixo(link) {
       seuUsuario: document.getElementById("seuUsuario").value,
       cpf: document.getElementById("cpf").value,
       cep: document.getElementById("cep").value,
-      produto: document.getElementById("produto").value,
+      produto: document.getElementById("boxProduto").value,
       informacoesAdicionais: document.getElementById("informacoesAdicionais")
         .value,
     };
