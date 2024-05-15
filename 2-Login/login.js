@@ -1,3 +1,4 @@
+// (LOGIN) Verifica se o login existe no banco de dados. Se sim, entra.
 function validacao(link) {
   const url = new URL("https://6638ec524253a866a24fb195.mockapi.io/UPX-Users");
 
@@ -32,41 +33,46 @@ function validacao(link) {
 
 // -------------------------------------------------------------------------------------------------
 
+// (REGISTER) Verifica se os campos foram inseridos corretamente e salva o objeto criado com ajuda da function "fetchUsers"
 async function salvarUser(link) {
-  if (document.getElementById("cpfRegistrar").value == "") {
-    alert("Por favor, preencha o CPF corretamente para continuar.");
-    return;
-  }
-  if (document.getElementById("cpfRegistrar").value.length < 14) {
-    alert("Por favor, o CPF deve conter todos os caracteres necessários.");
-    return;
-  }
+  const cpfRegistrar = document.getElementById("cpfRegistrar").value;
+  const emailRegistrar = document.getElementById("emailRegistrar").value;
+  const senhaRegistrar = document.getElementById("senhaRegistrar").value;
 
-  if (document.getElementById("emailRegistrar").value == "") {
-    alert("Por favor, preencha o E-mail corretamente para continuar.");
+  if (
+    cpfRegistrar == "" ||
+    cpfRegistrar.length < 14 ||
+    !validaCPF(cpfRegistrar)
+  ) {
+    alert("Por favor, preencha corretamente o CPF para continuar.");
     return;
   }
-  if (document.getElementById("senhaRegistrar").value == "") {
+  if (!validarEmail(emailRegistrar)) {
+    return;
+  }
+  if (senhaRegistrar == "") {
     alert("Por favor, preencha a senha para continuar.");
     return;
   }
-  if (!validaCPF(document.getElementById("cpfRegistrar").value)) {
-    alert("Por favor, preencha um CPF VÁLIDO para continuar.");
+  if (!(await validarCadastramento())) {
     return;
+  } else {
+    console.log("else");
+    let user = {
+      cpf: cpfRegistrar,
+      email: emailRegistrar,
+      senha: senhaRegistrar,
+    };
+
+    await fetchUsers(user);
+
+    window.location.href = link;
   }
-  let user = {
-    cpf: document.getElementById("cpfRegistrar").value,
-    email: document.getElementById("emailRegistrar").value,
-    senha: document.getElementById("senhaRegistrar").value,
-  };
-
-  await fetchUsers(user);
-
-  window.location.href = link;
 }
 
 // -------------------------------------------------------------------------------------------------
 
+// (REGISTER) Entra em contato com o banco de dados MockAPI para salvar o "user"
 async function fetchUsers(user) {
   let url = "https://6638ec524253a866a24fb195.mockapi.io/UPX-Users";
 
@@ -85,7 +91,7 @@ async function fetchUsers(user) {
 
 // -------------------------------------------------------------------------------------------------
 
-// Mascara de CPF do campo registro
+// (REGISTER) Mascara de CPF do campo registro
 document.getElementById("cpfRegistrar").addEventListener("input", function (e) {
   var value = e.target.value;
   var cpfPattern = value
@@ -99,6 +105,7 @@ document.getElementById("cpfRegistrar").addEventListener("input", function (e) {
 
 // -------------------------------------------------------------------------------------------------
 
+// (REGISTER) Verifica se o CPF é um CPF existente ou não
 function validaCPF(cpf) {
   cpf = cpf.replace(/\D+/g, "");
   if (cpf.length !== 11) return false;
@@ -121,4 +128,53 @@ function validaCPF(cpf) {
   if (resto !== parseInt(cpf.substring(10, 11))) return false;
 
   return true;
+}
+
+// -------------------------------------------------------------------------------------------------
+
+// (REGISTER) Valida se o email já está cadastrado
+// (REGISTER) Valida se o CPF já está cadastrado
+async function validarCadastramento() {
+  const verificarEmailBd = document.getElementById("emailRegistrar").value;
+  const verificarCpfBd = document.getElementById("cpfRegistrar").value;
+
+  const response = await fetch(
+    "https://6638ec524253a866a24fb195.mockapi.io/UPX-Users"
+  );
+  const data = await response.json();
+
+  const emailExiste = data.some((user) => user.email === verificarEmailBd);
+  const cpfExiste = data.some((user) => user.cpf === verificarCpfBd);
+  if (emailExiste) {
+    alert("Este email já está cadastrado!");
+    return false;
+  }
+
+  if (cpfExiste) {
+    alert("Este CPF já está cadastrado!");
+    return false;
+  }
+
+  return true;
+
+  // if (!emailExiste && !cpfExiste) {
+  //   alert(
+  //     "mensagem"
+  //   );
+  // }
+}
+
+// -------------------------------------------------------------------------------------------------
+
+// (REGISTER) Retorna se é um email válido ou não para ser inserido no campo "E-mail" de cadastro
+function validarEmail(email) {
+  const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
+
+  if (regex.test(email)) {
+    // alert("E-mail válido");
+    return true;
+  } else {
+    alert("E-mail inválido");
+    return false;
+  }
 }
