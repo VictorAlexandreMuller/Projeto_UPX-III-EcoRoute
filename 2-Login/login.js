@@ -33,26 +33,36 @@ function validacao(link) {
 // -------------------------------------------------------------------------------------------------
 
 async function salvarUser(link) {
-  if (
-    document.getElementById("cpfRegistrar").value.length < 14 ||
-    document.getElementById("cpfRegistrar").value == "" ||
-    document.getElementById("emailRegistrar").value == "" ||
-    document.getElementById("senhaRegistrar").value == ""
-  ) {
-    alert(
-      "Por favor, preencha todos os campos corretamente para realizar o seu cadastro."
-    );
-  } else {
-    let user = {
-      cpf: document.getElementById("cpfRegistrar").value,
-      email: document.getElementById("emailRegistrar").value,
-      senha: document.getElementById("senhaRegistrar").value,
-    };
-
-    await fetchUsers(user);
-
-    window.location.href = link;
+  if (document.getElementById("cpfRegistrar").value == "") {
+    alert("Por favor, preencha o CPF corretamente para continuar.");
+    return;
   }
+  if (document.getElementById("cpfRegistrar").value.length < 14) {
+    alert("Por favor, o CPF deve conter todos os caracteres necessários.");
+    return;
+  }
+
+  if (document.getElementById("emailRegistrar").value == "") {
+    alert("Por favor, preencha o E-mail corretamente para continuar.");
+    return;
+  }
+  if (document.getElementById("senhaRegistrar").value == "") {
+    alert("Por favor, preencha a senha para continuar.");
+    return;
+  }
+  if (!validaCPF(document.getElementById("cpfRegistrar").value)) {
+    alert("Por favor, preencha um CPF VÁLIDO para continuar.");
+    return;
+  }
+  let user = {
+    cpf: document.getElementById("cpfRegistrar").value,
+    email: document.getElementById("emailRegistrar").value,
+    senha: document.getElementById("senhaRegistrar").value,
+  };
+
+  await fetchUsers(user);
+
+  window.location.href = link;
 }
 
 // -------------------------------------------------------------------------------------------------
@@ -76,42 +86,39 @@ async function fetchUsers(user) {
 // -------------------------------------------------------------------------------------------------
 
 // Mascara de CPF do campo registro
-// function mascara(i) {
-//   var v = i.value;
+document.getElementById("cpfRegistrar").addEventListener("input", function (e) {
+  var value = e.target.value;
+  var cpfPattern = value
+    .replace(/\D/g, "") // Remove qualquer coisa que não seja número
+    .replace(/(\d{3})(\d)/, "$1.$2") // Adiciona ponto após o terceiro dígito
+    .replace(/(\d{3})(\d)/, "$1.$2") // Adiciona ponto após o sexto dígito
+    .replace(/(\d{3})(\d)/, "$1-$2") // Adiciona traço após o nono dígito
+    .replace(/(-\d{2})\d+?$/, "$1"); // Impede entrada de mais de 11 dígitos
+  e.target.value = cpfPattern;
+});
 
-//   if (isNaN(v[v.length - 1])) {
-//     // impede entrar outro caractere que não seja número
-//     i.value = v.substring(0, v.length - 1);
-//     return;
-//   }
+// -------------------------------------------------------------------------------------------------
 
-//   i.setAttribute("maxlength", "14");
-//   if (v.length == 3 || v.length == 7) i.value += ".";
-//   if (v.length == 11) i.value += "-";
-// }
+function validaCPF(cpf) {
+  cpf = cpf.replace(/\D+/g, "");
+  if (cpf.length !== 11) return false;
 
-function somenteNumeros(e) {
-  let charCode = e.charCode ? e.charCode : e.keyCode;
-  // charCode 8 é para backspace
-  if (charCode == 8) {
-    return true;
-  }
-  // charCode 48 até 57 são números de 0 a 9
-  if (charCode < 48 || charCode > 57) {
-    return false;
-  }
-  return true;
-}
+  let soma = 0;
+  let resto;
+  if (/^(\d)\1{10}$/.test(cpf)) return false; // Verifica sequências iguais
 
-function formatar(mascara, documento) {
-  let i = documento.value.length;
-  let saida = "#";
-  let texto = mascara.substring(i);
+  for (let i = 1; i <= 9; i++)
+    soma += parseInt(cpf.substring(i - 1, i)) * (11 - i);
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf.substring(9, 10))) return false;
 
-  while (texto.substring(0, 1) != saida && texto.length) {
-    documento.value += texto.substring(0, 1);
-    i++;
-    texto = mascara.substring(i);
-  }
+  soma = 0;
+  for (let i = 1; i <= 10; i++)
+    soma += parseInt(cpf.substring(i - 1, i)) * (12 - i);
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf.substring(10, 11))) return false;
+
   return true;
 }
