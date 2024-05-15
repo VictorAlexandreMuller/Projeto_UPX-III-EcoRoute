@@ -137,15 +137,6 @@
           <div class="servicesButtons">
             <div
               class="box-3"
-              id="actionButtonEcoCoins"
-              href="../7-EcoCoins/ecoCoins.html"
-            >
-              <div class="btn btn-three">
-                <span id="actionButtonEcoCoins">EcoCoins</span>
-              </div>
-            </div>
-            <div
-              class="box-3"
               id="actionButtonReciclar"
               href="../4-NovosDescartes/nDescartes.html"
             >
@@ -157,6 +148,16 @@
             </div>
             <div
               class="box-3"
+              id="actionButtonEcoCoins"
+              href="../7-EcoCoins/ecoCoins.html"
+            >
+              <div class="btn btn-three">
+                <span id="actionButtonEcoCoins">EcoCoins</span>
+              </div>
+            </div>
+
+            <div
+              class="box-3"
               id="actionButtonMapa"
               href="../99-TesteMap/Map/googleMaps.html"
             >
@@ -166,6 +167,10 @@
                 </button>
               </div>
             </div>
+            <div id="testeLocalStorage">
+              Usuário
+              <div id="testeeeee"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -174,4 +179,16 @@
   </body>
   <script src="../0-HeaderFooter/headerFooter.js"></script>
   <script src="posLogin.js"></script>
+  <script>
+    window.onload = function () {
+      // Seleciona a div pelo id
+      var div = document.getElementById("testeeeee");
+
+      // Obtém o email do usuário do localStorage
+      var userEmail = localStorage.getItem("userEmail");
+
+      // Define o conteúdo da div para o email do usuário
+      div.textContent = userEmail;
+    };
+  </script>
 </html>
