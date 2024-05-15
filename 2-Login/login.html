@@ -93,11 +93,13 @@
             >
               <label for="chk" aria-hidden="true">Cadastre-se</label>
               <input
-                id="nomeRegistrar"
+                onkeydown="return (somenteNumeros(event) && formatar('###.###.###-##',this))"
+                maxlength="14"
+                id="cpfRegistrar"
                 class="input"
                 type="text"
-                name="nome"
-                placeholder="Nome"
+                name="cpf"
+                placeholder="CPF"
                 required=""
               />
               <input
