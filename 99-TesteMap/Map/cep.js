@@ -1,3 +1,4 @@
+// ----------------------------------------------------------------------------
 function consultar(event) {
   event.preventDefault();
   let cep = document.querySelector("#cep").value;
