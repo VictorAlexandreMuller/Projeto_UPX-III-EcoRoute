@@ -1,3 +1,6 @@
+// Variável para receber o usuário de login
+var acesso;
+
 // Adiciona um ouvinte de evento para o botão de login/registrar
 document
   .getElementById("actionNavButtonLoginRegister")
