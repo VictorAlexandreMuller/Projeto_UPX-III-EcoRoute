@@ -93,8 +93,6 @@
             >
               <label for="chk" aria-hidden="true">Cadastre-se</label>
               <input
-                onkeydown="return (somenteNumeros(event) && formatar('###.###.###-##',this))"
-                maxlength="14"
                 id="cpfRegistrar"
                 class="input"
                 type="text"
@@ -119,6 +117,7 @@
                 required=""
               />
               <button
+                id="cpfForm"
                 type="submit"
                 onclick="salvarUser('../2-Login/login.html')"
               >
