@@ -51,3 +51,32 @@ async function fetchLixo(lixo) {
     }
   });
 }
+
+// ----------------------------------------------------------------------------------
+// Seta o usuário do local storage ao usuário da pessoa automaticamente
+let usuario = localStorage.getItem("userEmail");
+document.querySelector("#seuUsuario").value = usuario;
+
+// Função para buscar o CPF pelo email no MockAPI
+function getCpfByEmail(email) {
+  return fetch(`${urlServerUsers}`)
+    .then((response) => response.json())
+    .then((data) => {
+      // Encontre o usuário com o email correspondente
+      let user = data.find((user) => user.email === email);
+      return user ? user.cpf : null; // Retorne o CPF se o usuário for encontrado
+    });
+}
+
+getCpfByEmail(usuario)
+  .then((cpf) => {
+    if (cpf) {
+      document.querySelector("#cpf").value = cpf;
+    } else {
+      console.error("Usuário não encontrado");
+    }
+  })
+  .catch((err) => {
+    console.error(err);
+  });
+// ----------------------------------------------------------------------------------

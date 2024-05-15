@@ -1,8 +1,9 @@
 // (LOGIN) Verifica se o login existe no banco de dados. Se sim, entra.
 function validacao(link) {
   const url = new URL("https://6638ec524253a866a24fb195.mockapi.io/UPX-Users");
+  const emailLogin = document.getElementById("emailLogin").value;
 
-  url.searchParams.append("email", document.getElementById("emailLogin").value);
+  url.searchParams.append("email", emailLogin);
 
   fetch(url, {
     method: "GET",
@@ -13,13 +14,16 @@ function validacao(link) {
         return res.json();
       }
       // handle error
-      alert("Fora do ar.");
+      // alert("Fora do ar.");
     })
     .then((users) => {
       // mockapi returns only tasks that match `hello` string
       if (users[0].senha == document.getElementById("senhaLogin").value) {
         acesso = users[0].email;
-        console.log(acesso);
+
+        // DOCUMENTO LOCAL STORAGE: https://warcontent.com/localstorage-javascript/
+        localStorage.setItem("userEmail", emailLogin);
+
         window.location.href = link;
       } else {
         alert("Senha inválida.");

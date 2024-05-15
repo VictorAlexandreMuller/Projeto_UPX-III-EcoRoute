@@ -58,7 +58,12 @@
     </header>
     <main>
       <div class="divMainMap">
-        <!-- <section class="zeroSection">
+        <!-- A Section abaixo possui display none, 
+          pois serve apenas como gambiarra temporária a ser 
+          arrumada futuramente para que apareça o serviço de rotas 
+          entre dois pontos no google maps (clique em dois pontos 
+          no google maps para traçar o percurso) -->
+        <section style="display: none" class="zeroSection">
           <p>
             <label for="">Origem</label>
             <input type="text" name="destino" id="origem" />
@@ -67,7 +72,7 @@
             <label for="">Destino</label>
             <input type="text" name="destino" id="destino" />
           </p>
-        </section> -->
+        </section>
         <section class="firstSection">
           <div id="map"></div>
           <button
@@ -184,4 +189,5 @@
     async
     defer
   ></script>
+  <script></script>
 </html>

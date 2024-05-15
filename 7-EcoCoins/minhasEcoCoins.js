@@ -2,7 +2,7 @@ function listaMinhasEcoCoins() {
   let listaMinhasEcoCoins = document.querySelector("#listaMinhasEcoCoins");
   listaMinhasEcoCoins.innerHTML = "";
 
-  fetch(urlServer)
+  fetch(urlServerColetas)
     .then((response) => response.json())
     .then((data) => {
       data.forEach((Descartes) => {
@@ -15,7 +15,7 @@ function listaMinhasEcoCoins() {
         // button.classList.add("btn-excluir");
         // console.log(Descartes.id);
         // button.onclick = () => {
-        //   fetch(`${urlServer}/${Descartes.id}`, {
+        //   fetch(`${urlServerColetas}/${Descartes.id}`, {
         //     method: "DELETE",
         //   }).then(() => listaAnimais());
         // };
