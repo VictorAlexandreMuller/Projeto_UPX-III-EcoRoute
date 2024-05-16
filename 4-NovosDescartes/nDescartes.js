@@ -30,6 +30,8 @@ async function salvarLixo(link) {
         .value,
     };
 
+    localStorage.setItem("guardarCEP", document.getElementById("cep").value);
+
     await fetchLixo(lixo);
 
     window.location.href = link;
@@ -62,9 +64,8 @@ function getCpfByEmail(email) {
   return fetch(`${urlServerUsers}`)
     .then((response) => response.json())
     .then((data) => {
-      // Encontre o usuário com o email correspondente
       let user = data.find((user) => user.email === email);
-      return user ? user.cpf : null; // Retorne o CPF se o usuário for encontrado
+      return user ? user.cpf : null;
     });
 }
 
