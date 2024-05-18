@@ -172,9 +172,10 @@ async function validarCadastramento() {
 
 // (REGISTER) Retorna se é um email válido ou não para ser inserido no campo "E-mail" de cadastro
 function validarEmail(email) {
-  const regex = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
+  const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
+  const regex2 = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9]+\.[a-zA-Z]+\.[a-zA-Z]+$/;
 
-  if (regex.test(email)) {
+  if (regex.test(email) || regex2.test(email)) {
     // alert("E-mail válido");
     return true;
   } else {
