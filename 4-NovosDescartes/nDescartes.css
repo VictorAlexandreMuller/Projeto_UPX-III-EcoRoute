@@ -39,7 +39,7 @@
 }
 
 .textinho > p {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: var(--fonte-family-input--Varela);
   font-size: 1.5vw;
   text-align: center;
   margin: 2%;
@@ -116,7 +116,7 @@
   border-radius: 5px;
 }
 
-/* palavras: Seu Usuário, CPF, Cidade/CEP, Produto para Descarte */
+/* palavras: Seu Usuário, CPF, Cidade/CEP */
 .normalTextArea + span {
   position: absolute;
   left: 10px;
@@ -124,6 +124,7 @@
   color: #355891;
   cursor: text;
   transition: 0.3s ease;
+  font-family: var(--fonte-family-input--Varela);
 }
 
 .normalTextArea:placeholder-shown + span {
@@ -135,7 +136,7 @@
 .normalTextArea:valid + span,
 .normalTextArea:hover + span {
   top: 30px;
-  font-size: 14px;
+  font-size: 11px;
   /* font-weight: 600; */
 }
 
@@ -144,13 +145,14 @@
 }
 
 .comboTextArea {
-  font-size: 14px;
+  font-size: 15px;
   width: 32.6vh;
   padding: 10px;
   outline: 0;
   border: 1px solid #355891;
   color: #355891;
   border-radius: 5px;
+  font-family: var(--fonte-family-input--Varela);
 }
 
 .comboTextAreaJS {
@@ -165,6 +167,12 @@
   color: green;
 }
 
+.textInputArea,
+.normalTextArea {
+  font-family: var(--fonte-family-input--Varela);
+  font-size: 14px;
+}
+
 /* palavra: Informações */
 .textInputArea + span {
   position: absolute;
@@ -173,6 +181,7 @@
   color: #355891;
   cursor: text;
   transition: 0.3s ease;
+  font-family: var(--fonte-family-input--Varela);
 }
 
 .textInputArea:placeholder-shown + span {
@@ -280,7 +289,7 @@
 
 .custom-btn {
   background: transparent;
-  backdrop-filter: blur(10px);
+  backdrop-filter: 0px;
   border: 1px solid white;
   border-radius: 7px;
   cursor: pointer;
@@ -289,6 +298,7 @@
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   transition: all 1s;
+  text-shadow: 5px 5px 20px rgb(42, 42, 42);
 }
 
 .custom-btn:hover {
@@ -298,8 +308,9 @@
 
 .custom-btn > p {
   color: #fff;
-  font-family: "Arial";
+  font-family: var(--fonte-family-button--GillSans);
   font-size: 15px;
 }
+
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */

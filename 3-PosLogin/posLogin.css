@@ -1,5 +1,6 @@
 .displayProdutosAceitos {
   padding: 0.5% 1.5%;
+  margin-top: calc(4vh);
   /* border: 4px solid red; */
 
   display: grid;
@@ -12,6 +13,7 @@
 }
 
 .apresentacao {
+  /* border: 2px solid blue; */
   text-align: center;
   padding: 1% 5%;
   text-shadow: 3px 3px 20px rgb(42, 42, 42);
@@ -20,11 +22,12 @@
 .apresentacao > p {
   color: white;
   letter-spacing: 2px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
+  font-family: var(--fonte-family-input--Varela);
+  font-size: 2vw;
 }
 
 .placeGrid {
+  /* border: 1px solid red; */
   padding: 4%;
 
   display: flex;
@@ -95,7 +98,7 @@ aplicar o efeito e mostrar o back-card */
   width: 25vh;
 
   font-size: 1.2vw;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fonte-family-input--Varela);
   text-align: center;
   color: #3e7667;
   font-weight: bold;
@@ -115,14 +118,14 @@ aplicar o efeito e mostrar o back-card */
   border-radius: 30px;
   padding: 2% 5%;
   height: 50%;
-  gap: 10vh;
+  gap: 5vh;
 }
 
 .servicesTitle {
   text-align: center;
   letter-spacing: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2rem;
+  font-family: var(--fonte-family-input--Varela);
+  font-size: 2vw;
   color: white;
   padding: 1% 5%;
   text-shadow: 3px 3px 20px rgb(42, 42, 42);
@@ -131,11 +134,17 @@ aplicar o efeito e mostrar o back-card */
 .servicesButtons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 2% 5%;
+  padding: 0% 5%;
+  gap: 60px;
 
   border: 0px solid white;
   border-radius: 30px;
+}
+
+.divBotoesServicos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 /* ------------------------------------------------------------------- */
@@ -197,7 +206,7 @@ aplicar o efeito e mostrar o back-card */
 .box-3 > div > span {
   text-align: center;
   letter-spacing: 5px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fonte-family-input--Varela);
   font-size: 1.3vw;
   color: white;
   text-shadow: 3px 3px 20px rgb(42, 42, 42);
@@ -207,7 +216,7 @@ aplicar o efeito e mostrar o back-card */
   all: initial;
   text-align: center;
   letter-spacing: 5px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--fonte-family-input--Varela);
   font-size: 1.3vw;
   color: white;
   text-shadow: 3px 3px 20px rgb(42, 42, 42);
@@ -216,3 +225,75 @@ aplicar o efeito e mostrar o back-card */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
 /* ------------------------------------------------------------------- */
+
+.userLocalStorage {
+  background-color: #66a182;
+
+  position: relative;
+  margin: auto; /* centraliza */
+  border-radius: 8px;
+
+  color: white;
+  text-align: center;
+  letter-spacing: 5px;
+  font-family: var(--fonte-family-input--Varela);
+  font-size: 1.3vw;
+  text-shadow: 3px 3px 20px rgb(42, 42, 42);
+  cursor: default;
+  width: 50%;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.userLocalStorage svg {
+  position: absolute;
+}
+
+.userLocalStorage .line {
+  stroke-dasharray: 26; /* tracinhos */
+  stroke-width: 0.1vw;
+  fill: transparent;
+  stroke: rgb(173, 236, 194);
+  animation: svgAnimation 15s linear infinite;
+}
+
+@keyframes svgAnimation {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+
+.findLocalStorageZero {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+#findLocalStorage {
+  letter-spacing: 0px;
+  display: inline-block;
+  animation: userEfect 7s linear infinite;
+}
+
+@keyframes userEfect {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.paddingBoxUser {
+  padding: 5% 0%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
