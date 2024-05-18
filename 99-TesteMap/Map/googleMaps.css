@@ -3,30 +3,30 @@
 
 .divMainMap {
   /* border: 1px solid red; */
-  margin-top: calc(15px + 3.5vh);
+  margin-top: calc(7vh);
 
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.1vw;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 30% 15% 30%;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 .firstSection {
   /* border: 1px solid blue; */
-  width: 30%;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+  gap: 30px;
 }
 
 .secondSection {
   /* border: 1px solid yellow; */
-  width: 20%;
   padding: 1%;
 
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
 }
@@ -37,6 +37,7 @@
   padding: 0.2vw 0vw;
   border: 0.1vw solid rgb(50, 73, 50);
   border-radius: 10px;
+  width: 100%;
 }
 
 .inputField {
@@ -45,11 +46,10 @@
 
 .thirdSection {
   /* border: 1px solid yellow; */
-  width: 20%;
-  padding: 1%;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-evenly;
 }
 
@@ -73,28 +73,30 @@
   background: #ddd;
 }
 
-/* Legend das bordas */
-.cepFieldset > legend,
-.infosFieldset > legend,
+/* Legend thirdSection */
 .resultFieldset > legend {
   cursor: default;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--fonte-family-input--Varela);
   text-align: center;
 }
 
-/* a */
+/* CEP, RUA, BAIRRO, ESTADO, ORIGEM e Todos conteúdo interno da thirdSection */
 .cepFieldset > p > label,
 .infosFieldset > p > label,
-.resultFieldset > div > p {
-  font-family: "Varela Round", sans-serif;
+.resultFieldset > p {
+  font-size: 20px;
+  font-family: var(--fonte-family-input--Varela);
 }
 
+/* Coteúdo interno das input CEP RUA BAIRRO ESTADO ORIGEM */
 .cepFieldset > p > input,
 .infosFieldset > p > input,
 .resultFieldset > div {
+  font-size: 17px;
   text-align: center;
 }
 
+/* Tira a borda padrão do fieldset da Div CEP + Divs Get Campos + Div Resultados */
 .cepFieldset,
 .infosFieldset,
 .resultFieldset {
@@ -103,32 +105,30 @@
   border: none;
 }
 
+/* Div superior CEP da secondSection */
 .cepFieldset {
   /* border: 1px solid red; */
-  height: 150px;
   display: flex;
   flex-direction: column;
+  gap: 20px;
   align-items: center;
   justify-content: space-evenly;
 }
 
+/* Div inferior Gets da secondSection */
 .infosFieldset {
-  height: 400px;
   /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
   justify-content: space-evenly;
 }
 
-.cepFieldset > button {
-  margin: 0.7vw 0vw;
-}
-
+/* Trabalha no espaçamento entre os Label e Input da secondSection inteira, tanto a de cima quanto a de baixo */
 .cepFieldset > p,
 .infosFieldset > p {
   /* border: 1px solid white; */
-  padding-top: 0.3vw;
 
   display: flex;
   align-items: center;
@@ -136,21 +136,12 @@
   gap: 0.3vw;
 }
 
-.divResultButton {
-  height: 20%;
-  /* border: 2px solid greenyellow; */
-  border-radius: 10px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
+/* Div dentro da thirdSection */
 .resultFieldset {
-  border: 2px solid rgb(37, 113, 72);
-  border-radius: 60px;
+  border: 2px solid white;
+  border-radius: 25px;
   height: 100%;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -158,18 +149,19 @@
   justify-content: space-evenly;
 }
 
+/* Titulo da tag 'legend' da thirdSection */
 .resultFieldset > legend {
-  color: rgb(36, 79, 36);
-  font-size: 1.3vw;
+  color: white;
+  text-shadow: 5px 5px 20px rgb(42, 42, 42);
+  font-size: 1.5vw;
 }
 
-#resultados {
-  height: 100%;
-}
-
+/* Conteudo interno da div de dentro da thirdSection  */
 .pResultados {
-  font-size: 0.7vw;
-  /* border: 1px solid red; */
+  color: white;
+  font-size: 1vw;
+  text-shadow: 5px 5px 20px rgb(42, 42, 42);
+
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -177,6 +169,7 @@
   justify-content: space-evenly;
 }
 
+/* ------------------------------------------------------------------------------------ */
 /* HTML <button class="button-33" role="button">Button 33</button> */
 /* CSS */
 .button-33 {
@@ -195,7 +188,7 @@
   text-decoration: none;
   transition: all 250ms;
   border: 0;
-  font-size: 16px;
+  font-size: 1vw;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -208,10 +201,12 @@
     rgba(44, 187, 99, 0.25) 0 16px 32px;
   transform: scale(1.05) rotate(-1deg);
 }
+/* ------------------------------------------------------------------------------------ */
 
+/* ------------------------------------------------------------------------------------ */
 .custom-btn {
   background: transparent;
-  backdrop-filter: blur(10px);
+  backdrop-filter: 0px;
   border: 1px solid white;
   border-radius: 7px;
   cursor: pointer;
@@ -220,6 +215,7 @@
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
     7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
   transition: all 1s;
+  text-shadow: 5px 5px 20px rgb(42, 42, 42);
 }
 
 .custom-btn:hover {
@@ -229,6 +225,7 @@
 
 .custom-btn > p {
   color: #fff;
-  font-family: "Arial";
+  font-family: var(--fonte-family-button--GillSans);
   font-size: 15px;
 }
+/* ------------------------------------------------------------------------------------ */

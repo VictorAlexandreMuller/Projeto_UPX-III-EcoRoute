@@ -30,7 +30,7 @@ document
 // Seta o usuário do LocalStorage
 window.onload = function () {
   // Seleciona a div pelo id
-  var div = document.getElementById("testeeeee");
+  var div = document.getElementById("findLocalStorage");
 
   // Obtém o email do usuário do localStorage
   var userEmail = localStorage.getItem("userEmail");

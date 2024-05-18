@@ -74,7 +74,7 @@ function initMap() {
       zoom: 11,
 
       disableDefaultUI: true,
-      mapTypeControl: false,
+      mapTypeControl: true,
       zoomControl: false,
       streetViewControl: true,
       fullscreenControl: true,
@@ -569,3 +569,24 @@ document
   });
 
 // ----------------------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------------
+// Validador de CEP
+var cep = document.getElementById("cep");
+
+cep.addEventListener("input", function (e) {
+  var valor = e.target.value;
+
+  // Remove caracteres não numéricos
+  valor = valor.replace(/\D/g, "");
+
+  // Adiciona o hífen
+  if (valor.length > 5) {
+    valor = valor.slice(0, 5) + "-" + valor.slice(5, 8);
+  }
+
+  // Atualiza o valor do input
+  e.target.value = valor;
+});
+
+// ----------------------------------------------------------------------------------

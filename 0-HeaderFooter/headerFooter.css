@@ -1,3 +1,19 @@
+:root {
+  /* Utilizado em títulos, legend e textos */
+  /* --fonte-family-titulo--Arial: Arial, Helvetica, sans-serif; */
+
+  /* Utilizado em campos de label dos inputs e em Cards */
+  --fonte-family-input--Varela: "Varela Round", sans-serif;
+
+  /* Utilizado no botão "VOLTAR AO PAINEL ECOROUTE" e em TITULOS DE PAGE */
+  --fonte-family-button--GillSans: "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+
+  /* Roboto */
+  /* --fonte--roboto: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
+}
+
 * {
   margin: 0;
   padding: 0;
