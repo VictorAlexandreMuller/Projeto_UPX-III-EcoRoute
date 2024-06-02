@@ -1,15 +1,14 @@
 .displayProdutosAceitos {
-  padding: 0.5% 1.5%;
+  /* border: 4px solid white; */
   margin-top: calc(4vh);
-  /* border: 4px solid red; */
 
-  display: grid;
-  grid-template-columns: 70% 30%;
-  gap: 2vh;
+  display: flex;
+  align-items: start;
 }
 
 .leftSidePosLogin {
   /* border: 2px solid blue; */
+  width: 75%;
 }
 
 .apresentacao {
@@ -112,12 +111,15 @@ aplicar o efeito e mostrar o back-card */
 }
 
 .rightSidePosLogin {
-  display: flex;
-  flex-direction: column;
-  border: 0px solid white;
+  /* border: 1px solid red; */
+  width: 25%;
+  height: 100%;
   border-radius: 30px;
   padding: 2% 5%;
   height: 50%;
+
+  display: flex;
+  flex-direction: column;
   gap: 5vh;
 }
 
@@ -132,16 +134,17 @@ aplicar o efeito e mostrar o back-card */
 }
 
 .servicesButtons {
+  /* border: 2px solid white; */
+  padding: 0% 5%;
+  border-radius: 30px;
+
   display: flex;
   flex-direction: column;
-  padding: 0% 5%;
   gap: 60px;
-
-  border: 0px solid white;
-  border-radius: 30px;
 }
 
 .divBotoesServicos {
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   gap: 10px;

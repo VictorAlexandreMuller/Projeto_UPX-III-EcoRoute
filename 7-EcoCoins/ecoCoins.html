@@ -58,6 +58,16 @@
     </header>
     <main>
       <div class="mainDiv">
+        <section class="zeroSection">
+          <div class="divUsuario">
+            <p>Usuário:&nbsp;</p>
+            <div id="captarUser"></div>
+          </div>
+          <div class="divUsuario">
+            <p>CPF:&nbsp;</p>
+            <div id="captarCPF"></div>
+          </div>
+        </section>
         <section class="firstSection">
           <fieldset class="ecoFieldset">
             <legend class="legendEcoFieldset">
@@ -87,13 +97,27 @@
             </legend>
             <div>
               <ul id="listaMinhasEcoCoins">
-                <li>Teste</li>
+                <li></li>
               </ul>
             </div>
           </fieldset>
         </section>
-        <section>
+        <section class="secondSection">
           <div class="buttonPlace">
+            <button
+              class="button-33"
+              role="button"
+              id="botao-pdf"
+              onclick="gerarPDF()"
+            >
+              Imprimir
+            </button>
+            <div style="display: none" id="conteudoPDF">
+              <ul>
+                <li></li>
+              </ul>
+            </div>
+
             <button
               class="custom-btn"
               id="actionButtonVoltaPagina"
@@ -115,8 +139,14 @@
     </footer>
   </body>
   <script src="../0-Suports/utils.js"></script>
-  <script src="ecoCoins.js"></script>
+  <script src="botoesEcoCoins.js"></script>
   <script src="valoresEcoCoins.js"></script>
   <script src="minhasEcoCoins.js"></script>
   <script src="../0-HeaderFooter/headerFooter.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+    integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
 </html>
