@@ -40,3 +40,13 @@ window.onload = function () {
 };
 
 // --------------------------------------------------------
+
+// Sair do Login
+document
+  .getElementById("botaoSairDoLogin")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    var hrefValue = this.getAttribute("href");
+    window.location.href = hrefValue;
+    localStorage.clear();
+  });

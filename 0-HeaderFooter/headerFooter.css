@@ -42,11 +42,6 @@ main {
   height: 100%;
 }
 
-/* a {
-  text-decoration: none;
-  color: inherit;
-} */
-
 /* (Header) NavBar fixada ao topo da página */
 .navBar {
   display: flex;
@@ -147,6 +142,10 @@ nav > div > button:hover svg {
   width: 100%;
   filter: drop-shadow(0 0 23px var(--animation-color));
 }
+
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
+/* ------------------------------------------------------------ */
 
 footer {
   height: 5vh;
